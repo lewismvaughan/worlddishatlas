@@ -1,0 +1,67 @@
+{
+  "slug": "pad-thai",
+  "name": "Pad Thai",
+  "name_native": "ผัดไทย",
+  "cuisine": "Thai",
+  "category": "noodle",
+  "region": "Bangkok",
+  "country": "Thailand",
+  "description": "Thai stir-fried rice noodles with tamarind, fish sauce, palm sugar, dried shrimp, egg, tofu, peanuts, and lime. National dish, but invented in the 1930s, not centuries old.",
+  "history": "Pad Thai is younger than most diners assume. Prime Minister Plaek Phibunsongkhram pushed it as a national dish in the late 1930s as part of a cultural reform programme that also gave Thailand its modern name. Rice noodles were promoted because they used less rice than steamed-rice dishes and reduced Thailand's dependence on rice imports during the war years. The canonical pad Thai pairs sweet (palm sugar), sour (tamarind), salty (fish sauce), umami (dried shrimp) in a balance that distinguishes it from Chinese stir-fries that share the same wok technique.",
+  "ingredients_summary": "Rice noodles, tamarind, fish sauce, palm sugar, dried shrimp, egg, tofu, beansprouts, garlic chives, peanuts, lime.",
+  "ingredients": [
+    {"name": "Dried flat rice noodles", "amount": "200g, soaked in cold water 30 min"},
+    {"name": "Tamarind paste", "amount": "3 tbsp (dilute concentrate with equal water)"},
+    {"name": "Fish sauce", "amount": "2 tbsp"},
+    {"name": "Palm sugar", "amount": "2 tbsp, shaved"},
+    {"name": "Dried shrimp", "amount": "1 tbsp, soaked and chopped"},
+    {"name": "Garlic", "amount": "3 cloves, minced"},
+    {"name": "Firm tofu", "amount": "100g, cubed"},
+    {"name": "Eggs", "amount": "2"},
+    {"name": "Beansprouts", "amount": "1 cup"},
+    {"name": "Garlic chives", "amount": "1/2 cup, cut into 5cm lengths"},
+    {"name": "Roasted peanuts", "amount": "3 tbsp, crushed"},
+    {"name": "Lime", "amount": "1, in wedges"},
+    {"name": "Neutral oil", "amount": "2 tbsp"}
+  ],
+  "method": [
+    "Make the sauce: combine tamarind, fish sauce, palm sugar in a small pan over low heat until the sugar dissolves. Reserve.",
+    "Heat a wok to ripping-hot. Add the oil, then the garlic and dried shrimp; stir for 15 seconds.",
+    "Add the tofu and stir-fry until edges crisp, about 1 minute.",
+    "Drain the soaked noodles and toss them in. Pour the sauce over and stir-fry hard, lifting and tossing so noodles do not clump. Cook until noodles soften, about 2 minutes.",
+    "Push everything to one side of the wok. Crack the eggs into the empty side and let set briefly, then break them up and fold into the noodles.",
+    "Add the beansprouts and garlic chives. Toss for 30 seconds.",
+    "Plate. Top with crushed peanuts. Serve with lime wedges, extra fish sauce, dried chili flakes, and sugar on the side so each diner adjusts to taste."
+  ],
+  "serves": 2,
+  "prep_time": "PT30M",
+  "cook_time": "PT8M",
+  "total_time": "PT38M",
+  "tip": "Soak the noodles in cold water for half an hour. Hot soaking softens them too much for the wok. They should still be al dente when they hit the heat.",
+  "common_mistakes": [
+    "Cooking in a non-hot pan. The wok must be smoking before noodles go in. Otherwise everything stews.",
+    "Using ketchup. Tamarind is the right acid; ketchup is the lazy substitute that ruins the dish.",
+    "Skipping the dried shrimp. The umami floor of pad Thai depends on it."
+  ],
+  "variations": [
+    {"name": "Pad Thai goong", "note": "With fresh river prawns. Common in tourist Bangkok, less common in home cooking."},
+    {"name": "Pad Thai ho mok", "note": "Wrapped in a thin omelette. A presentation flourish."}
+  ],
+  "related_dishes": ["pad-see-ew", "rad-na", "pad-kee-mao"],
+  "compared_to": ["pad-see-ew"],
+  "core_ingredients": ["rice-noodle", "tamarind", "fish-sauce", "palm-sugar"],
+  "where_to_eat": [
+    {"name": "Thip Samai", "city": "Bangkok", "country_slug": "thailand", "city_slug": "bangkok"},
+    {"name": "Pad Thai Fai Ta Lu", "city": "Bangkok", "country_slug": "thailand", "city_slug": "bangkok"}
+  ],
+  "editorial_score": 4.8,
+  "popularity_signal": "global",
+  "hero_image": "/img/dish-pad-thai.jpg",
+  "hero_image_alt": "Pad Thai with shrimp, beansprouts, lime wedges, and crushed peanuts on a banana leaf",
+  "hero_image_source_url": "https://unsplash.com/photos/placeholder-padthai",
+  "verified": {
+    "source_url": "https://hot-thai-kitchen.com/pad-thai-recipe/",
+    "history_evidence_url": "https://www.bbc.com/travel/article/20180413-thailands-national-dish-pad-thai",
+    "checked_on": "2026-06-07"
+  }
+}

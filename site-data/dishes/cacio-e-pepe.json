@@ -1,0 +1,57 @@
+{
+  "slug": "cacio-e-pepe",
+  "name": "Cacio e Pepe",
+  "name_native": "Cacio e pepe",
+  "cuisine": "Italian",
+  "category": "pasta",
+  "region": "Lazio",
+  "country": "Italy",
+  "description": "Roman pasta of pecorino, black pepper, and starchy pasta water. Three ingredients, no fat outside the cheese. The cleanest, hardest Roman dish to make at home.",
+  "history": "Cacio e pepe is the older sibling of the Roman pasta family that includes gricia, amatriciana, and carbonara. Roman shepherds carried aged pecorino, dried pasta, and pepper into the mountains because all three travelled well. The friction in modern recipes is the emulsion: how to turn cheese and starchy water into a sauce that coats the pasta without seizing into a stringy mat. The reliable method came out of Roman trattoria kitchens in the 20th century and has since been written about more times than any other three-ingredient dish in Italian cooking.",
+  "ingredients_summary": "Pasta, pecorino romano, black pepper, starchy pasta water.",
+  "ingredients": [
+    {"name": "Tonnarelli or spaghetti", "amount": "400g"},
+    {"name": "Pecorino Romano", "amount": "200g, very finely grated"},
+    {"name": "Black peppercorns", "amount": "2 tsp, fresh-cracked"},
+    {"name": "Sea salt", "amount": "for the pasta water (less than usual; pecorino is salty)"}
+  ],
+  "method": [
+    "Toast the black pepper in a dry wide pan over low heat for 30 seconds until fragrant. Add a ladle of cold water and let it bloom.",
+    "Cook the pasta in lightly salted water until two minutes short of al dente. Reserve a full mug of pasta water.",
+    "Transfer the pasta with tongs into the pepper pan. Add a splash of pasta water and toss over low heat for one minute.",
+    "Take the pan off the heat. Wait 30 seconds for the temperature to drop below 80 C.",
+    "Add the grated pecorino in three additions, tossing vigorously between each and adding small splashes of pasta water. The cheese should melt into a glossy emulsion, never into clumps.",
+    "Plate immediately and finish with more pepper. The sauce thickens as it cools, so serve hot bowls."
+  ],
+  "serves": 4,
+  "prep_time": "PT5M",
+  "cook_time": "PT15M",
+  "total_time": "PT20M",
+  "tip": "Grate the pecorino so fine it almost looks like powder. Coarsely grated cheese will not melt evenly and you will end up with the dreaded cheese ball.",
+  "common_mistakes": [
+    "Adding cheese to a screaming-hot pan. Pecorino seizes above 80 C. Always off the heat.",
+    "Using parmigiano. Parmigiano is wonderful but it is not pecorino; the lactic profile is different.",
+    "Cooking in heavily salted water. The pecorino is already salty enough."
+  ],
+  "variations": [
+    {"name": "Cacio e pepe with shrimp", "note": "Coastal Italian add. Polarising in Rome, common in restaurants further south."},
+    {"name": "Mortadella mantecato", "note": "A modern Roman riff that finishes with a swirl of whipped mortadella foam on top."}
+  ],
+  "related_dishes": ["carbonara", "gricia", "amatriciana"],
+  "compared_to": ["carbonara", "gricia"],
+  "core_ingredients": ["pecorino-romano", "black-pepper"],
+  "where_to_eat": [
+    {"name": "Felice a Testaccio", "city": "Rome", "country_slug": "italy", "city_slug": "rome", "tablejourney_url": "/italy/rome/restaurants/da-felice/"},
+    {"name": "Roma Sparita", "city": "Rome", "country_slug": "italy", "city_slug": "rome"}
+  ],
+  "editorial_score": 4.9,
+  "popularity_signal": "global",
+  "hero_image": "/img/dish-cacio-e-pepe.jpg",
+  "hero_image_alt": "Cacio e pepe on tonnarelli with cracked black pepper and finely grated pecorino romano",
+  "hero_image_source_url": "https://unsplash.com/photos/placeholder-cacio",
+  "verified": {
+    "source_url": "https://www.lacucinaitaliana.it/ricetta/primi/cacio-e-pepe/",
+    "history_evidence_url": "https://www.lacucinaitaliana.it/news/in-primo-piano/storia-cacio-e-pepe/",
+    "checked_on": "2026-06-07"
+  }
+}

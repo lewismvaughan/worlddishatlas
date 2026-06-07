@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block schema_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "{{ page.canonical_url }}#webpage",
+      "url": {{ page.canonical_url | tojson }},
+      "name": {{ page.title | tojson }},
+      "description": {{ page.meta_description | tojson }},
+      "inLanguage": "en",
+      "isPartOf": {"@id": "https://worlddishatlas.com/#site"},
+      "publisher": {"@id": "https://worlddishatlas.com/#org"}
+    },
+    {
+      "@type": "ItemList",
+      "@id": "{{ page.canonical_url }}#itemlist",
+      "numberOfItems": {{ dishes | length }},
+      "itemListElement": [
+        {% for d in dishes %}
+        {
+          "@type": "ListItem",
+          "position": {{ loop.index }},
+          "url": "{{ 'https://worlddishatlas.com/dish/' + d.slug + '/' }}",
+          "name": {{ d.name | tojson }}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {% for crumb in page.breadcrumb_items %}
+        {"@type": "ListItem", "position": {{ loop.index }}, "name": {{ crumb.name | tojson }}{% if crumb.url %}, "item": {{ crumb.url | tojson }}{% endif %} }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<header class="wda-page-header">
+    <h1>{{ page.h1 }}</h1>
+    {% if page.subtitle %}<p class="wda-page-subtitle">{{ page.subtitle }}</p>{% endif %}
+</header>
+
+{% if dishes %}
+<div class="wda-dish-grid">
+    {% for d in dishes %}
+    <a href="/dish/{{ d.slug }}/" class="wda-dish-card">
+        {% if d.hero_image %}<img src="{{ d.hero_image }}" alt="{{ d.hero_image_alt }}" width="400" height="225" loading="lazy">{% endif %}
+        <div class="wda-dish-card-body">
+            <h3>{{ d.name }}</h3>
+            <p class="wda-dish-card-cuisine">{{ d.cuisine }} {{ '·' }} {{ d.category | title }}</p>
+            <p class="wda-dish-card-desc">{{ d.description[:140] }}{% if d.description|length > 140 %}…{% endif %}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<p class="wda-empty">No dishes yet. The desk is working on it.</p>
+{% endif %}
+{% endblock %}

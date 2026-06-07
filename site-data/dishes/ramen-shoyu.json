@@ -1,0 +1,68 @@
+{
+  "slug": "ramen-shoyu",
+  "name": "Shoyu Ramen",
+  "name_native": "醤油ラーメン",
+  "cuisine": "Japanese",
+  "category": "noodle",
+  "region": "Tokyo",
+  "country": "Japan",
+  "description": "Tokyo-style ramen with a soy-based tare, chicken-pork dashi, alkaline wheat noodles, chashu pork, menma, scallion, and ajitama soft egg. The original ramen.",
+  "history": "Ramen arrived in Japan from China at the end of the 19th century and became Japanese in the 20th. Shoyu (soy sauce) is the original Tokyo profile, formalised in the 1920s and 1930s at the Asakusa Rai-Rai Ken pushcart. Postwar wheat scarcity gave way to American grain shipments in the 1950s and shoyu ramen became a Tokyo street staple. The four building blocks are stable: a wheat noodle made with kansui (alkaline mineral water) that gives ramen its yellow color and bite, a tare (concentrated seasoning) in the bottom of the bowl, a dashi (broth) poured on top, and the toppings. Shoyu tare, chicken-pork dashi, straight medium-thin noodles is the Tokyo profile.",
+  "ingredients_summary": "Alkaline wheat noodles, chicken-pork dashi, shoyu tare, chashu, soft egg, menma, scallion, nori.",
+  "ingredients": [
+    {"name": "Fresh ramen noodles (medium-thin, straight)", "amount": "400g"},
+    {"name": "Chicken backs and feet", "amount": "1kg (for the dashi)"},
+    {"name": "Pork bones", "amount": "500g (neck or trotter)"},
+    {"name": "Kombu kelp", "amount": "20cm piece"},
+    {"name": "Dried bonito flakes", "amount": "20g"},
+    {"name": "Japanese soy sauce", "amount": "120ml (for the tare)"},
+    {"name": "Mirin", "amount": "30ml"},
+    {"name": "Sake", "amount": "30ml"},
+    {"name": "Chashu pork (rolled belly, braised)", "amount": "200g, sliced"},
+    {"name": "Ajitama soft-boiled eggs (marinated in shoyu)", "amount": "4 halves"},
+    {"name": "Menma (fermented bamboo shoots)", "amount": "60g"},
+    {"name": "Scallion greens", "amount": "1/2 cup, sliced thin"},
+    {"name": "Nori sheets", "amount": "4 squares"}
+  ],
+  "method": [
+    "Make the dashi. Blanch the chicken bones and pork in boiling water for 5 minutes; drain and rinse. Return to a clean pot with 4L cold water and the kombu. Bring to a slow simmer (never boil hard) for 4-6 hours. Add bonito flakes in the final 15 minutes. Strain through cheesecloth.",
+    "Make the tare. Combine shoyu, mirin, sake, and 1 tbsp dashi in a saucepan; simmer 5 minutes to soften the alcohol. Let cool. This is the bowl-bottom seasoning.",
+    "Boil a large pot of water. Cook the noodles 60-90 seconds (check the package; fresh noodles are fast).",
+    "Warm the serving bowls with hot water; pour out. Put 2 tablespoons of tare in each bowl.",
+    "Pour 350ml hot dashi over the tare. Stir.",
+    "Drain noodles thoroughly (excess water dilutes the soup). Transfer to the bowls.",
+    "Top with chashu, two egg halves, menma, scallion. Stand a nori square on the rim. Eat within 3 minutes."
+  ],
+  "serves": 4,
+  "prep_time": "PT30M",
+  "cook_time": "PT6H",
+  "total_time": "PT6H30M",
+  "tip": "The bowl must be hotter than you think. A cold bowl drops the dashi temperature in 30 seconds and the ramen experience collapses. Warm with boiling water before assembly.",
+  "common_mistakes": [
+    "Boiling the dashi hard. Hard boil cloud and emulsify the broth; what shoyu wants is clarity.",
+    "Cooking noodles in the dashi pot. Always a separate pot of water for noodles; otherwise starch ruins the broth.",
+    "Skipping the kansui. Alkaline noodles are non-negotiable; spaghetti is not ramen."
+  ],
+  "variations": [
+    {"name": "Niboshi shoyu", "note": "Tokyo nostalgia style using dried sardines for an old-school fishier dashi."},
+    {"name": "Tantanmen", "note": "Sichuan-influenced spicy variant. Different dish, related family."}
+  ],
+  "related_dishes": ["ramen-shio", "ramen-miso", "ramen-tonkotsu", "tsukemen"],
+  "compared_to": ["ramen-tonkotsu", "ramen-miso"],
+  "core_ingredients": ["soy-sauce", "kombu", "bonito", "chashu"],
+  "where_to_eat": [
+    {"name": "Tokyo Ramen Street", "city": "Tokyo", "country_slug": "japan", "city_slug": "tokyo"},
+    {"name": "Afuri", "city": "Tokyo", "country_slug": "japan", "city_slug": "tokyo"},
+    {"name": "Tsuta", "city": "Tokyo", "country_slug": "japan", "city_slug": "tokyo"}
+  ],
+  "editorial_score": 4.7,
+  "popularity_signal": "global",
+  "hero_image": "/img/dish-ramen-shoyu.jpg",
+  "hero_image_alt": "Tokyo shoyu ramen with chashu pork, ajitama egg halves, menma, scallion, and nori",
+  "hero_image_source_url": "https://unsplash.com/photos/placeholder-ramen",
+  "verified": {
+    "source_url": "https://www.justonecookbook.com/shoyu-ramen/",
+    "history_evidence_url": "https://www.smithsonianmag.com/arts-culture/the-history-of-ramen-from-prison-food-to-japanese-cultural-staple-9116955/",
+    "checked_on": "2026-06-07"
+  }
+}

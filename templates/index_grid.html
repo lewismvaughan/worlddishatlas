@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block schema_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "{{ page.canonical_url }}#webpage",
+      "url": {{ page.canonical_url | tojson }},
+      "name": {{ page.title | tojson }},
+      "description": {{ page.meta_description | tojson }},
+      "inLanguage": "en",
+      "isPartOf": {"@id": "https://worlddishatlas.com/#site"}
+    },
+    {
+      "@type": "ItemList",
+      "numberOfItems": {{ items | length }},
+      "itemListElement": [
+        {% for it in items %}
+        {"@type": "ListItem", "position": {{ loop.index }}, "url": "https://worlddishatlas.com{{ it.url }}", "name": {{ it.name | tojson }} }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {% for crumb in page.breadcrumb_items %}
+        {"@type": "ListItem", "position": {{ loop.index }}, "name": {{ crumb.name | tojson }}{% if crumb.url %}, "item": {{ crumb.url | tojson }}{% endif %} }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<header class="wda-page-header">
+    <h1>{{ page.h1 }}</h1>
+    {% if page.subtitle %}<p class="wda-page-subtitle">{{ page.subtitle }}</p>{% endif %}
+</header>
+
+{% if items %}
+<nav class="wda-tag-grid" aria-label="{{ item_kind | title }}s">
+    {% for it in items %}
+    <a href="{{ it.url }}" class="wda-tag-chip">{{ it.name }}<span class="wda-tag-count">{{ it.count }}</span></a>
+    {% endfor %}
+</nav>
+{% else %}
+<p class="wda-empty">Nothing here yet.</p>
+{% endif %}
+{% endblock %}
