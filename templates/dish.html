@@ -21,7 +21,8 @@
       },
       "publisher": {"@id": "https://worlddishatlas.com/#org"},
       "mainEntityOfPage": {{ page.canonical_url | tojson }},
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "wordCount": {{ ((dish.history | default("")) ~ " " ~ (dish.description | default(""))) | wordcount }}
     },
     {
       "@type": "Recipe",
@@ -163,6 +164,8 @@
 
     <footer class="wda-dish-footer">
         <p class="wda-byline">
+            <span class="wda-reading-time">{{ ((dish.history | default("")) ~ " " ~ (dish.description | default(""))) | wordcount // 200 + 1 }} min read</span> &middot;
+            
             Edited by <a href="/about/lewis/">Lewis Vaughan</a>.
             Last verified <time datetime="{{ dish.verified.checked_on }}">{{ dish.verified.checked_on }}</time>.
             See <a href="/methodology/">methodology</a> for how every claim is verified.

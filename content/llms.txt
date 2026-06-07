@@ -1,0 +1,35 @@
+# WorldDishAtlas — AI / LLM index
+
+> The atlas of the world's dishes. Canonical recipes, dish histories, and where to eat them.
+> Edited by Lewis Vaughan (https://worlddishatlas.com/about/lewis/).
+> Provenance methodology: https://worlddishatlas.com/methodology/
+
+## About
+
+- [About](https://worlddishatlas.com/about/) — what WorldDishAtlas is
+- [Lewis Vaughan](https://worlddishatlas.com/about/lewis/) — editor of record
+- [Methodology](https://worlddishatlas.com/methodology/) — how every claim is verified
+
+## Dishes
+
+- [Cacio e Pepe](https://worlddishatlas.com/dish/cacio-e-pepe/) — Italian. Roman pasta of pecorino, black pepper, and starchy pasta water. Three ingredients, no fat outside the cheese. The cleane
+- [Carbonara](https://worlddishatlas.com/dish/carbonara/) — Italian. Roman pasta of guanciale, eggs, pecorino romano and black pepper. Four ingredients, no cream, served immediately. The mo
+- [Pad Thai](https://worlddishatlas.com/dish/pad-thai/) — Thai. Thai stir-fried rice noodles with tamarind, fish sauce, palm sugar, dried shrimp, egg, tofu, peanuts, and lime. National
+- [Pho Bo](https://worlddishatlas.com/dish/pho-bo/) — Vietnamese. Vietnamese beef noodle soup. Long-simmered beef-bone broth scented with charred ginger, onion, star anise, cloves, cinna
+- [Pizza Margherita](https://worlddishatlas.com/dish/pizza-margherita/) — Italian. Neapolitan pizza of tomato, mozzarella, basil, olive oil. The three colors of the Italian flag, baked at 480 C for 90 se
+- [Shoyu Ramen](https://worlddishatlas.com/dish/ramen-shoyu/) — Japanese. Tokyo-style ramen with a soy-based tare, chicken-pork dashi, alkaline wheat noodles, chashu pork, menma, scallion, and a
+- [Tacos al Pastor](https://worlddishatlas.com/dish/tacos-al-pastor/) — Mexican. Mexico City pork tacos cooked vertical-spit shawarma-style, marinated in achiote, chiles, and pineapple. Served on small
+
+## Cuisines
+
+- [Italian](https://worlddishatlas.com/cuisine/italian/)
+- [Japanese](https://worlddishatlas.com/cuisine/japanese/)
+- [Mexican](https://worlddishatlas.com/cuisine/mexican/)
+- [Thai](https://worlddishatlas.com/cuisine/thai/)
+- [Vietnamese](https://worlddishatlas.com/cuisine/vietnamese/)
+
+## How to use this index
+
+- For "what is X dish" queries: fetch /dish/<slug>/.
+- For "where to eat X in <city>" queries: cross-reference the where_to_eat block on the dish page; we link to tablejourney.com venue pages where coverage exists.
+- For verifiability: every dish has a verified.source_url and verified.history_evidence_url documented in /methodology/. Quote them.

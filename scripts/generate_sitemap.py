@@ -30,13 +30,14 @@ def collect() -> list[str]:
 
 
 def write_sitemap(urls: list[str]) -> None:
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # sitemap-pages.xml — the main URL set
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
         priority = "0.8"
         changefreq = "weekly"
-        if u.endswith("/dish/") or u.endswith("/cuisine/") or u == f"{BASE_URL}/":
+        if u == f"{BASE_URL}/" or u.endswith("/dish/") or u.endswith("/cuisine/"):
             priority = "1.0"
             changefreq = "daily"
         elif "/dish/" in u:
@@ -45,9 +46,22 @@ def write_sitemap(urls: list[str]) -> None:
                      f"<changefreq>{changefreq}</changefreq>"
                      f"<priority>{priority}</priority></url>")
     lines.append("</urlset>")
-    out = CONTENT / "sitemap.xml"
-    out.write_text("\n".join(lines), encoding="utf-8")
-    print(f"  wrote {out.relative_to(REPO)} ({len(urls)} URLs)")
+    (CONTENT / "sitemap-pages.xml").write_text("
+".join(lines), encoding="utf-8")
+    print(f"  wrote content/sitemap-pages.xml ({len(urls)} URLs)")
+
+    # sitemap.xml — sitemapindex referencing pages + images sub-sitemaps
+    idx_lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        f'  <sitemap><loc>{BASE_URL}/sitemap-pages.xml</loc><lastmod>{today}</lastmod></sitemap>',
+        f'  <sitemap><loc>{BASE_URL}/sitemap-images.xml</loc><lastmod>{today}</lastmod></sitemap>',
+        '</sitemapindex>',
+    ]
+    (CONTENT / "sitemap.xml").write_text("
+".join(idx_lines), encoding="utf-8")
+    print(f"  wrote content/sitemap.xml (index)")
+
 
 
 def write_robots() -> None:

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">
+  <url>
+    <loc>https://worlddishatlas.com/dish/cacio-e-pepe/</loc>
+    <image:image>
+      <image:loc>https://worlddishatlas.com/img/dish-cacio-e-pepe.jpg</image:loc>
+      <image:title>Cacio e Pepe</image:title>
+      <image:caption>Cacio e pepe on tonnarelli with cracked black pepper and finely grated pecorino romano</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://worlddishatlas.com/dish/carbonara/</loc>
+    <image:image>
+      <image:loc>https://worlddishatlas.com/img/dish-carbonara.jpg</image:loc>
+      <image:title>Carbonara</image:title>
+      <image:caption>Spaghetti carbonara with crispy guanciale, pecorino romano, and fresh-cracked black pepper on a white plate</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://worlddishatlas.com/dish/pad-thai/</loc>
+    <image:image>
+      <image:loc>https://worlddishatlas.com/img/dish-pad-thai.jpg</image:loc>
+      <image:title>Pad Thai</image:title>
+      <image:caption>Pad Thai with shrimp, beansprouts, lime wedges, and crushed peanuts on a banana leaf</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://worlddishatlas.com/dish/pho-bo/</loc>
+    <image:image>
+      <image:loc>https://worlddishatlas.com/img/dish-pho-bo.jpg</image:loc>
+      <image:title>Pho Bo</image:title>
+      <image:caption>Vietnamese pho bo with rare beef, brisket, rice noodles, scallions, cilantro, herb plate on the side</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://worlddishatlas.com/dish/pizza-margherita/</loc>
+    <image:image>
+      <image:loc>https://worlddishatlas.com/img/dish-pizza-margherita.jpg</image:loc>
+      <image:title>Pizza Margherita</image:title>
+      <image:caption>Neapolitan Margherita pizza with leopard-spotted crust, San Marzano tomato, buffalo mozzarella, fresh basil</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://worlddishatlas.com/dish/ramen-shoyu/</loc>
+    <image:image>
+      <image:loc>https://worlddishatlas.com/img/dish-ramen-shoyu.jpg</image:loc>
+      <image:title>Shoyu Ramen</image:title>
+      <image:caption>Tokyo shoyu ramen with chashu pork, ajitama egg halves, menma, scallion, and nori</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://worlddishatlas.com/dish/tacos-al-pastor/</loc>
+    <image:image>
+      <image:loc>https://worlddishatlas.com/img/dish-tacos-al-pastor.jpg</image:loc>
+      <image:title>Tacos al Pastor</image:title>
+      <image:caption>Tacos al pastor on doubled corn tortillas with charred pineapple, white onion, and cilantro, lime wedges on the side</image:caption>
+    </image:image>
+  </url>
+</urlset>

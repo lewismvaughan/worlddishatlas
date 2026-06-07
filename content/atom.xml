@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WorldDishAtlas</title>
+  <subtitle>The atlas of the world's dishes. Canonical recipes, histories, and where to eat them.</subtitle>
+  <link href="https://worlddishatlas.com/" />
+  <link href="https://worlddishatlas.com/atom.xml" rel="self" />
+  <id>https://worlddishatlas.com/</id>
+  <updated>2026-06-07T12:19:34Z</updated>
+  <author><name>Lewis Vaughan</name><uri>https://worlddishatlas.com/about/lewis/</uri></author>
+  <generator>WorldDishAtlas</generator>
+
+  <entry>
+    <title>Cacio e Pepe</title>
+    <link href="https://worlddishatlas.com/dish/cacio-e-pepe/" />
+    <id>https://worlddishatlas.com/dish/cacio-e-pepe/</id>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <published>2026-06-07T00:00:00Z</published>
+    <summary>Roman pasta of pecorino, black pepper, and starchy pasta water. Three ingredients, no fat outside the cheese. The cleanest, hardest Roman dish to make at home.</summary>
+  </entry>
+  <entry>
+    <title>Carbonara</title>
+    <link href="https://worlddishatlas.com/dish/carbonara/" />
+    <id>https://worlddishatlas.com/dish/carbonara/</id>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <published>2026-06-07T00:00:00Z</published>
+    <summary>Roman pasta of guanciale, eggs, pecorino romano and black pepper. Four ingredients, no cream, served immediately. The most-copied and most-corrupted dish in Italian cooking.</summary>
+  </entry>
+  <entry>
+    <title>Pad Thai</title>
+    <link href="https://worlddishatlas.com/dish/pad-thai/" />
+    <id>https://worlddishatlas.com/dish/pad-thai/</id>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <published>2026-06-07T00:00:00Z</published>
+    <summary>Thai stir-fried rice noodles with tamarind, fish sauce, palm sugar, dried shrimp, egg, tofu, peanuts, and lime. National dish, but invented in the 1930s, not centuries old.</summary>
+  </entry>
+  <entry>
+    <title>Pho Bo</title>
+    <link href="https://worlddishatlas.com/dish/pho-bo/" />
+    <id>https://worlddishatlas.com/dish/pho-bo/</id>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <published>2026-06-07T00:00:00Z</published>
+    <summary>Vietnamese beef noodle soup. Long-simmered beef-bone broth scented with charred ginger, onion, star anise, cloves, cinnamon. Rice noodles, thin-sliced raw beef, fresh herbs at the table.</summary>
+  </entry>
+  <entry>
+    <title>Pizza Margherita</title>
+    <link href="https://worlddishatlas.com/dish/pizza-margherita/" />
+    <id>https://worlddishatlas.com/dish/pizza-margherita/</id>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <published>2026-06-07T00:00:00Z</published>
+    <summary>Neapolitan pizza of tomato, mozzarella, basil, olive oil. The three colors of the Italian flag, baked at 480 C for 90 seconds in a wood-fired oven.</summary>
+  </entry>
+  <entry>
+    <title>Shoyu Ramen</title>
+    <link href="https://worlddishatlas.com/dish/ramen-shoyu/" />
+    <id>https://worlddishatlas.com/dish/ramen-shoyu/</id>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <published>2026-06-07T00:00:00Z</published>
+    <summary>Tokyo-style ramen with a soy-based tare, chicken-pork dashi, alkaline wheat noodles, chashu pork, menma, scallion, and ajitama soft egg. The original ramen.</summary>
+  </entry>
+  <entry>
+    <title>Tacos al Pastor</title>
+    <link href="https://worlddishatlas.com/dish/tacos-al-pastor/" />
+    <id>https://worlddishatlas.com/dish/tacos-al-pastor/</id>
+    <updated>2026-06-07T00:00:00Z</updated>
+    <published>2026-06-07T00:00:00Z</published>
+    <summary>Mexico City pork tacos cooked vertical-spit shawarma-style, marinated in achiote, chiles, and pineapple. Served on small corn tortillas with onion, cilantro, lime, and a slice of charred pineapple.</summary>
+  </entry>
+</feed>

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block schema_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "{{ page.canonical_url }}#article",
+      "headline": {{ page.h1 | tojson }},
+      "description": {{ page.meta_description | tojson }},
+      "image": {{ page.og_image | tojson }},
+      "datePublished": "{{ now_iso }}",
+      "dateModified": "{{ now_iso }}",
+      "author": {"@type":"Person","@id":"https://worlddishatlas.com/about/lewis/#person","name":"Lewis Vaughan","url":"https://worlddishatlas.com/about/lewis/"},
+      "publisher": {"@id":"https://worlddishatlas.com/#org"},
+      "mainEntityOfPage": {{ page.canonical_url | tojson }},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {% for c in page.breadcrumb_items %}
+        {"@type":"ListItem","position":{{ loop.index }},"name":{{ c.name | tojson }}{% if c.url %},"item":{{ c.url | tojson }}{% endif %}}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="wda-compare">
+    <header class="wda-page-header">
+        <h1>{{ a.name }} vs {{ b.name }}</h1>
+        <p class="wda-page-subtitle">Side by side. What's actually different.</p>
+    </header>
+
+    <p class="wda-lede">{{ intro }}</p>
+
+    <table class="wda-compare-table">
+        <thead>
+            <tr><th></th><th>{{ a.name }}</th><th>{{ b.name }}</th></tr>
+        </thead>
+        <tbody>
+            <tr><th scope="row">Cuisine</th><td>{{ a.cuisine }}</td><td>{{ b.cuisine }}</td></tr>
+            <tr><th scope="row">Category</th><td>{{ a.category | title }}</td><td>{{ b.category | title }}</td></tr>
+            <tr><th scope="row">Region</th><td>{{ a.region or '—' }}</td><td>{{ b.region or '—' }}</td></tr>
+            <tr><th scope="row">Country</th><td>{{ a.country }}</td><td>{{ b.country }}</td></tr>
+            <tr><th scope="row">Core ingredients</th>
+                <td>{{ (a.core_ingredients or []) | map('replace', '-', ' ') | join(', ') | title }}</td>
+                <td>{{ (b.core_ingredients or []) | map('replace', '-', ' ') | join(', ') | title }}</td></tr>
+            {% if a.serves and b.serves %}<tr><th scope="row">Serves</th><td>{{ a.serves }}</td><td>{{ b.serves }}</td></tr>{% endif %}
+            {% if a.total_time and b.total_time %}<tr><th scope="row">Total time</th>
+                <td>{{ a.total_time | replace('PT','') | replace('H','h ') | replace('M','m') }}</td>
+                <td>{{ b.total_time | replace('PT','') | replace('H','h ') | replace('M','m') }}</td></tr>{% endif %}
+        </tbody>
+    </table>
+
+    <section>
+        <h2>The short version</h2>
+        <p>{{ short_version }}</p>
+    </section>
+
+    <section>
+        <h2>{{ a.name }}, in one paragraph</h2>
+        <p>{{ a.description }}</p>
+        <p><a href="/dish/{{ a.slug }}/" class="wda-button">Full {{ a.name }} guide</a></p>
+    </section>
+
+    <section>
+        <h2>{{ b.name }}, in one paragraph</h2>
+        <p>{{ b.description }}</p>
+        <p><a href="/dish/{{ b.slug }}/" class="wda-button">Full {{ b.name }} guide</a></p>
+    </section>
+
+    {% if shared_ingredients %}
+    <section>
+        <h2>What they share</h2>
+        <p>{{ shared_ingredients | join(', ') | title }} appear in both.</p>
+    </section>
+    {% endif %}
+
+    <footer class="wda-dish-footer">
+        <p class="wda-byline">
+            Edited by <a href="/about/lewis/">Lewis Vaughan</a>.
+            See <a href="/methodology/">methodology</a> for how every claim is verified.
+        </p>
+    </footer>
+</article>
+{% endblock %}
