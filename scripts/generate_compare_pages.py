@@ -55,7 +55,7 @@ def render_comparison(env, a, b, now_iso):
         short = f"Almost no overlap. {a['description'][:140]}"
 
     page = {
-        'title': f"{a['name']} vs {b['name']}. The difference, in one page | WorldDishAtlas",
+        'title': f"{a['name']} vs {b['name']} | WorldDishAtlas",
         'meta_description': (f"{a['name']} vs {b['name']}. Cuisine, ingredients, technique, and where each comes from. "
                               f"The side-by-side guide, with full recipes for both.")[:158],
         'canonical_url': canonical,

@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI training / retrieval bots welcome — editorial referral channel
+# AI training / retrieval bots welcome
 User-agent: GPTBot
 Allow: /
 User-agent: ClaudeBot

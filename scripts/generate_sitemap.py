@@ -1,21 +1,12 @@
 #!/usr/bin/env python3
-"""Generate sitemap.xml + robots.txt for WorldDishAtlas.
-
-Walks content/ and emits <loc> for every index.html with a real page
-(skips placeholder / 404 / asset paths). Splits into sub-sitemaps once
-URL count > 30K (Google limit is 50K; split early for headroom).
-"""
-
-import re
+"""Generate sitemap.xml (sitemapindex) + sitemap-pages.xml + robots.txt."""
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 CONTENT = REPO / "content"
 BASE_URL = "https://worlddishatlas.com"
-
-SKIP = ("/css/", "/js/", "/img/", "/assets/")
 
 
 def collect() -> list[str]:
@@ -29,11 +20,12 @@ def collect() -> list[str]:
     return urls
 
 
-def write_sitemap(urls: list[str]) -> None:
+def write_sitemap_pages(urls):
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    # sitemap-pages.xml — the main URL set
-    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
-             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
     for u in urls:
         priority = "0.8"
         changefreq = "weekly"
@@ -42,34 +34,34 @@ def write_sitemap(urls: list[str]) -> None:
             changefreq = "daily"
         elif "/dish/" in u:
             priority = "0.9"
-        lines.append(f"  <url><loc>{u}</loc><lastmod>{today}</lastmod>"
-                     f"<changefreq>{changefreq}</changefreq>"
-                     f"<priority>{priority}</priority></url>")
+        lines.append(
+            f"  <url><loc>{u}</loc><lastmod>{today}</lastmod>"
+            f"<changefreq>{changefreq}</changefreq>"
+            f"<priority>{priority}</priority></url>"
+        )
     lines.append("</urlset>")
-    (CONTENT / "sitemap-pages.xml").write_text("
-".join(lines), encoding="utf-8")
+    (CONTENT / "sitemap-pages.xml").write_text("\n".join(lines), encoding="utf-8")
     print(f"  wrote content/sitemap-pages.xml ({len(urls)} URLs)")
 
-    # sitemap.xml — sitemapindex referencing pages + images sub-sitemaps
-    idx_lines = [
+
+def write_sitemap_index():
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-        f'  <sitemap><loc>{BASE_URL}/sitemap-pages.xml</loc><lastmod>{today}</lastmod></sitemap>',
-        f'  <sitemap><loc>{BASE_URL}/sitemap-images.xml</loc><lastmod>{today}</lastmod></sitemap>',
-        '</sitemapindex>',
+        f"  <sitemap><loc>{BASE_URL}/sitemap-pages.xml</loc><lastmod>{today}</lastmod></sitemap>",
+        f"  <sitemap><loc>{BASE_URL}/sitemap-images.xml</loc><lastmod>{today}</lastmod></sitemap>",
+        "</sitemapindex>",
     ]
-    (CONTENT / "sitemap.xml").write_text("
-".join(idx_lines), encoding="utf-8")
-    print(f"  wrote content/sitemap.xml (index)")
+    (CONTENT / "sitemap.xml").write_text("\n".join(lines), encoding="utf-8")
+    print(f"  wrote content/sitemap.xml (sitemapindex)")
 
 
-
-def write_robots() -> None:
-    out = CONTENT / "robots.txt"
+def write_robots():
     text = """User-agent: *
 Allow: /
 
-# AI training / retrieval bots welcome — editorial referral channel
+# AI training / retrieval bots welcome
 User-agent: GPTBot
 Allow: /
 User-agent: ClaudeBot
@@ -83,16 +75,16 @@ Allow: /
 
 Sitemap: """ + BASE_URL + """/sitemap.xml
 """
-    out.write_text(text, encoding="utf-8")
-    print(f"  wrote {out.relative_to(REPO)}")
+    (CONTENT / "robots.txt").write_text(text, encoding="utf-8")
+    print(f"  wrote content/robots.txt")
 
 
-def main() -> int:
+def main():
     urls = collect()
     if not urls:
-        print("No URLs found — generate pages first.", file=sys.stderr)
-        return 1
-    write_sitemap(urls)
+        print("No URLs", file=sys.stderr); return 1
+    write_sitemap_pages(urls)
+    write_sitemap_index()
     write_robots()
     return 0
 
