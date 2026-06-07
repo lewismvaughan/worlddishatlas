@@ -22,6 +22,11 @@ OUT = REPO / "content" / "dish"
 BASE_URL = "https://worlddishatlas.com"
 
 
+
+def _existing_dish_slugs():
+    return {p.stem for p in DISHES.glob('*.json')}
+
+
 def render_dish(env, slug: str, data: dict) -> Path:
     canonical = f"{BASE_URL}/dish/{slug}/"
     page = {
@@ -38,6 +43,11 @@ def render_dish(env, slug: str, data: dict) -> Path:
             {"name": data["name"]},
         ],
     }
+    # Filter related/compared dish slugs to only those that exist
+    existing = _existing_dish_slugs()
+    for f in ("related_dishes", "compared_to"):
+        vals = data.get(f) or []
+        data[f] = [s for s in vals if s in existing]
     tpl = env.get_template("dish.html")
     html = tpl.render(dish=data, page=page)
     out_path = OUT / slug / "index.html"
