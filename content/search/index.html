@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search WorldDishAtlas</title>
+<meta name="description" content="Search every dish, cuisine, and ingredient covered on WorldDishAtlas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://worlddishatlas.com/search/">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+.wda-search-box { max-width: 640px; margin: 1rem auto 2rem; position: relative; }
+.wda-search-input { width: 100%; padding: 16px 20px; border: 1px solid var(--wda-divider); border-radius: 999px; font-size: 1.1rem; background: var(--wda-bg-card); color: var(--wda-fg); font-family: inherit; }
+.wda-search-input:focus { outline: none; border-color: var(--wda-accent); box-shadow: 0 0 0 3px rgba(176,58,24,.15); }
+.wda-search-results { max-width: 640px; margin: 0 auto; list-style: none; padding: 0; }
+.wda-search-result { padding: 14px 4px; border-bottom: 1px solid var(--wda-divider); }
+.wda-search-result a { display: block; text-decoration: none; color: var(--wda-fg); }
+.wda-search-result a:hover .wda-result-name { color: var(--wda-accent); }
+.wda-result-type { display: inline-block; font-size: .7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--wda-muted); background: var(--wda-bg-card); padding: 2px 8px; border-radius: 999px; margin-right: 8px; vertical-align: middle; }
+.wda-result-name { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; }
+.wda-result-subtitle { color: var(--wda-muted); font-size: .9rem; margin-top: 2px; }
+.wda-search-empty { color: var(--wda-muted); text-align: center; padding: 2rem 1rem; font-style: italic; }
+.wda-search-tip { text-align: center; color: var(--wda-muted); font-size: .9rem; max-width: 640px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<header class="wda-nav">
+    <div class="wda-nav-inner">
+        <a class="wda-brand" href="/">World<span class="wda-brand-mark">DishAtlas</span></a>
+        <nav class="wda-nav-links" aria-label="Primary">
+            <a href="/dish/">Dishes</a>
+            <a href="/cuisine/">Cuisines</a>
+            <a href="/about/">About</a>
+        </nav>
+    </div>
+</header>
+<main class="wda-main">
+    <header class="wda-page-header">
+        <h1>Search</h1>
+        <p class="wda-page-subtitle">Find a dish, cuisine, or ingredient.</p>
+    </header>
+    <div class="wda-search-box">
+        <input id="wda-q" class="wda-search-input" type="search" autocomplete="off"
+               autocapitalize="off" autocorrect="off" spellcheck="false"
+               placeholder="Try carbonara, ramen, or pho">
+    </div>
+    <ul id="wda-results" class="wda-search-results" aria-live="polite"></ul>
+    <p id="wda-empty" class="wda-search-empty" hidden>Nothing matches that yet. Try a shorter query, or <a href="/dish/">browse all dishes</a>.</p>
+    <p id="wda-tip" class="wda-search-tip">Start typing.</p>
+</main>
+<footer class="wda-footer">
+    <div class="wda-footer-inner">
+        <p><a href="/about/">About</a> &middot; <a href="/about/lewis/">Editor</a> &middot; <a href="/methodology/">Methodology</a> &middot; <a href="/contact/">Contact</a></p>
+    </div>
+</footer>
+<script>
+(() => {
+  const q = document.getElementById('wda-q');
+  const out = document.getElementById('wda-results');
+  const empty = document.getElementById('wda-empty');
+  const tip = document.getElementById('wda-tip');
+  let index = null;
+
+  function norm(s) {
+    return (s||'').toLowerCase()
+      .normalize('NFKD').replace(/[̀-ͯ]/g,'')
+      .replace(/[^a-z0-9 ]+/g,' ').replace(/\s+/g,' ').trim();
+  }
+
+  // Tiny fuzzy scorer: prefix > word-start > anywhere
+  function score(query, entry) {
+    const q = query;
+    const t = entry.tokens;
+    const n = entry.name.toLowerCase();
+    let s = 0;
+    if (n.startsWith(q)) s += 100;
+    if (t.startsWith(q)) s += 60;
+    // word-start matches
+    const words = t.split(' ');
+    for (const w of words) if (w.startsWith(q)) { s += 30; break; }
+    if (t.includes(q)) s += 10;
+    if (s === 0) {
+      // multi-token: every q word appears somewhere
+      const parts = q.split(' ').filter(Boolean);
+      if (parts.length > 1 && parts.every(p => t.includes(p))) s = 5;
+    }
+    return s + (entry.weight || 0);
+  }
+
+  function render(results) {
+    out.innerHTML = '';
+    if (results.length === 0) { empty.hidden = false; tip.hidden = true; return; }
+    empty.hidden = true; tip.hidden = true;
+    const frag = document.createDocumentFragment();
+    for (const r of results) {
+      const li = document.createElement('li');
+      li.className = 'wda-search-result';
+      const a = document.createElement('a');
+      a.href = r.url;
+      a.innerHTML = `<span class="wda-result-type">${r.type}</span><span class="wda-result-name">${r.name}</span><div class="wda-result-subtitle">${r.subtitle||''}</div>`;
+      li.appendChild(a);
+      frag.appendChild(li);
+    }
+    out.appendChild(frag);
+  }
+
+  function search() {
+    const raw = norm(q.value);
+    if (!raw) { out.innerHTML = ''; empty.hidden = true; tip.hidden = false; return; }
+    if (!index) return;
+    const scored = index.entries
+      .map(e => ({...e, _s: score(raw, e)}))
+      .filter(e => e._s > 0)
+      .sort((a,b) => b._s - a._s)
+      .slice(0, 40);
+    render(scored);
+  }
+
+  fetch('/search/search-index.json', {credentials:'omit'})
+    .then(r => r.json())
+    .then(j => { index = j; if (q.value) search(); })
+    .catch(() => { tip.textContent = 'Search index failed to load. Try refreshing.'; });
+
+  let t;
+  q.addEventListener('input', () => { clearTimeout(t); t = setTimeout(search, 60); });
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const first = out.querySelector('a');
+      if (first) window.location.href = first.href;
+    }
+  });
+  // Read ?q= from URL on load
+  const params = new URLSearchParams(location.search);
+  if (params.get('q')) { q.value = params.get('q'); search(); }
+  q.focus();
+})();
+</script>
+</body>
+</html>

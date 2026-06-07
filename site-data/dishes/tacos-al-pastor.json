@@ -10,22 +10,70 @@
   "history": "Tacos al pastor is the Mexican re-invention of Lebanese shawarma. Lebanese migrants settled in Puebla and Mexico City in the early 20th century and brought the vertical spit and marinated meat technique with them. By the 1960s the format was being made with pork (substituted for the original lamb) and a Mexican marinade of dried chiles, achiote, vinegar, and pineapple. The pineapple slice spinning on top of the trompo (spit) is the visual signature of the dish; the juice and acid help break down the pork and a thin sliver gets cut into each taco. Authentic tacos al pastor are made on a vertical gas-fired trompo, sliced thin, and served on hand-pressed corn tortillas the size of a child's hand.",
   "ingredients_summary": "Pork shoulder, dried guajillo and ancho chiles, achiote, pineapple, vinegar, garlic, cumin, oregano, corn tortillas, onion, cilantro, lime.",
   "ingredients": [
-    {"name": "Pork shoulder", "amount": "1.5kg, thinly sliced"},
-    {"name": "Dried guajillo chiles", "amount": "6, stemmed and seeded"},
-    {"name": "Dried ancho chiles", "amount": "3, stemmed and seeded"},
-    {"name": "Achiote paste", "amount": "2 tbsp"},
-    {"name": "White vinegar", "amount": "1/4 cup"},
-    {"name": "Pineapple juice", "amount": "1/2 cup"},
-    {"name": "Garlic", "amount": "6 cloves"},
-    {"name": "Cumin seeds", "amount": "1 tsp, toasted"},
-    {"name": "Dried Mexican oregano", "amount": "1 tsp"},
-    {"name": "Salt", "amount": "to taste"},
-    {"name": "Corn tortillas", "amount": "16 small (taco-size)"},
-    {"name": "Fresh pineapple", "amount": "1/4 of a fruit, finely diced"},
-    {"name": "White onion", "amount": "1/2, finely diced"},
-    {"name": "Cilantro", "amount": "1/2 bunch, chopped"},
-    {"name": "Limes", "amount": "4, in wedges"},
-    {"name": "Salsa verde or salsa roja", "amount": "to serve"}
+    {
+      "name": "Pork shoulder",
+      "amount": "1.5kg, thinly sliced"
+    },
+    {
+      "name": "Dried guajillo chiles",
+      "amount": "6, stemmed and seeded"
+    },
+    {
+      "name": "Dried ancho chiles",
+      "amount": "3, stemmed and seeded"
+    },
+    {
+      "name": "Achiote paste",
+      "amount": "2 tbsp"
+    },
+    {
+      "name": "White vinegar",
+      "amount": "1/4 cup"
+    },
+    {
+      "name": "Pineapple juice",
+      "amount": "1/2 cup"
+    },
+    {
+      "name": "Garlic",
+      "amount": "6 cloves"
+    },
+    {
+      "name": "Cumin seeds",
+      "amount": "1 tsp, toasted"
+    },
+    {
+      "name": "Dried Mexican oregano",
+      "amount": "1 tsp"
+    },
+    {
+      "name": "Salt",
+      "amount": "to taste"
+    },
+    {
+      "name": "Corn tortillas",
+      "amount": "16 small (taco-size)"
+    },
+    {
+      "name": "Fresh pineapple",
+      "amount": "1/4 of a fruit, finely diced"
+    },
+    {
+      "name": "White onion",
+      "amount": "1/2, finely diced"
+    },
+    {
+      "name": "Cilantro",
+      "amount": "1/2 bunch, chopped"
+    },
+    {
+      "name": "Limes",
+      "amount": "4, in wedges"
+    },
+    {
+      "name": "Salsa verde or salsa roja",
+      "amount": "to serve"
+    }
   ],
   "method": [
     "Toast the chiles in a dry pan 30 seconds per side. Cover with hot water and soak 20 minutes.",
@@ -47,26 +95,64 @@
     "Cutting the pork in chunks. Vertical spit slices are paper-thin; replicate that at home with a sharp knife."
   ],
   "variations": [
-    {"name": "Tacos arabes", "note": "Pueblan ancestor. Closer to the Lebanese original: pita-style bread, less aggressive chile marinade."},
-    {"name": "Vampiros", "note": "Open tortilla griddled with melted cheese before pastor goes on top."},
-    {"name": "Gringa", "note": "Quesadilla-style: pastor between two flour tortillas with cheese."}
+    {
+      "name": "Tacos arabes",
+      "note": "Pueblan ancestor. Closer to the Lebanese original: pita-style bread, less aggressive chile marinade."
+    },
+    {
+      "name": "Vampiros",
+      "note": "Open tortilla griddled with melted cheese before pastor goes on top."
+    },
+    {
+      "name": "Gringa",
+      "note": "Quesadilla-style: pastor between two flour tortillas with cheese."
+    }
   ],
-  "related_dishes": ["tacos-de-suadero", "tacos-arabes", "gringa"],
-  "compared_to": ["tacos-arabes", "tacos-de-suadero"],
-  "core_ingredients": ["pork-shoulder", "guajillo", "achiote", "pineapple", "corn-tortilla"],
+  "related_dishes": [
+    "tacos-de-suadero",
+    "tacos-arabes",
+    "gringa"
+  ],
+  "compared_to": [
+    "tacos-arabes",
+    "tacos-de-suadero"
+  ],
+  "core_ingredients": [
+    "pork-shoulder",
+    "guajillo",
+    "achiote",
+    "pineapple",
+    "corn-tortilla"
+  ],
   "where_to_eat": [
-    {"name": "El Vilsito", "city": "Mexico City", "country_slug": "mexico", "city_slug": "mexico-city"},
-    {"name": "Los Cocuyos", "city": "Mexico City", "country_slug": "mexico", "city_slug": "mexico-city"},
-    {"name": "El Tizoncito", "city": "Mexico City", "country_slug": "mexico", "city_slug": "mexico-city"}
+    {
+      "name": "El Vilsito",
+      "city": "Mexico City",
+      "country_slug": "mexico",
+      "city_slug": "mexico-city"
+    },
+    {
+      "name": "Los Cocuyos",
+      "city": "Mexico City",
+      "country_slug": "mexico",
+      "city_slug": "mexico-city"
+    },
+    {
+      "name": "El Tizoncito",
+      "city": "Mexico City",
+      "country_slug": "mexico",
+      "city_slug": "mexico-city"
+    }
   ],
   "editorial_score": 4.9,
   "popularity_signal": "global",
   "hero_image": "/img/dish-tacos-al-pastor.jpg",
   "hero_image_alt": "Tacos al pastor on doubled corn tortillas with charred pineapple, white onion, and cilantro, lime wedges on the side",
-  "hero_image_source_url": "https://unsplash.com/photos/placeholder-pastor",
+  "hero_image_source_url": "https://worlddishatlas.com/credits/",
   "verified": {
     "source_url": "https://www.mexicoinmykitchen.com/tacos-al-pastor-recipe/",
     "history_evidence_url": "https://www.bbc.com/travel/article/20190312-the-mexican-taco-with-lebanese-roots",
     "checked_on": "2026-06-07"
-  }
+  },
+  "hero_image_credit": "Brand-generated placeholder. Real photography is replacing these as we shoot."
 }

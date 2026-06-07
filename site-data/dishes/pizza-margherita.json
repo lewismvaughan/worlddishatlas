@@ -10,14 +10,38 @@
   "history": "The marketing story is that Raffaele Esposito of Pizzeria Brandi made this pizza for Queen Margherita of Savoy in 1889, naming it after her and arranging the toppings to match the Italian flag. The first part is documented; the flag claim was added later and is contested. What matters more is that Neapolitan pizza-makers had been pairing tomato and mozzarella on a dough for at least a century before 1889. The Margherita is the modern canonical version of an older Naples tradition. The Associazione Verace Pizza Napoletana codified the rules in 1984: only San Marzano tomatoes, only fior di latte or buffalo mozzarella from Campania, only 60-90 second bakes in a wood oven at 430-480 C.",
   "ingredients_summary": "00 flour, water, salt, yeast for the dough. San Marzano tomato, mozzarella, basil, olive oil for the top.",
   "ingredients": [
-    {"name": "00 flour", "amount": "500g (for 4 pizzas)"},
-    {"name": "Water", "amount": "325ml, room temperature"},
-    {"name": "Fine sea salt", "amount": "12g"},
-    {"name": "Fresh yeast", "amount": "2g (or 0.5g dried)"},
-    {"name": "Whole San Marzano tomatoes", "amount": "200g, crushed by hand, no cooking"},
-    {"name": "Fior di latte or buffalo mozzarella", "amount": "200g, torn"},
-    {"name": "Fresh basil leaves", "amount": "8-12"},
-    {"name": "Extra virgin olive oil", "amount": "2 tbsp"}
+    {
+      "name": "00 flour",
+      "amount": "500g (for 4 pizzas)"
+    },
+    {
+      "name": "Water",
+      "amount": "325ml, room temperature"
+    },
+    {
+      "name": "Fine sea salt",
+      "amount": "12g"
+    },
+    {
+      "name": "Fresh yeast",
+      "amount": "2g (or 0.5g dried)"
+    },
+    {
+      "name": "Whole San Marzano tomatoes",
+      "amount": "200g, crushed by hand, no cooking"
+    },
+    {
+      "name": "Fior di latte or buffalo mozzarella",
+      "amount": "200g, torn"
+    },
+    {
+      "name": "Fresh basil leaves",
+      "amount": "8-12"
+    },
+    {
+      "name": "Extra virgin olive oil",
+      "amount": "2 tbsp"
+    }
   ],
   "method": [
     "Dissolve the yeast in the water. Combine with flour and salt; knead 10 minutes until the dough is smooth and slightly tacky.",
@@ -40,25 +64,58 @@
     "Drowning the pie in sauce or cheese. Margherita is restraint."
   ],
   "variations": [
-    {"name": "Margherita DOP", "note": "Strict AVPN: only San Marzano DOP tomatoes and Mozzarella di Bufala Campana DOP."},
-    {"name": "Margherita extra", "note": "Adds Parmigiano and a higher proportion of buffalo mozzarella."}
+    {
+      "name": "Margherita DOP",
+      "note": "Strict AVPN: only San Marzano DOP tomatoes and Mozzarella di Bufala Campana DOP."
+    },
+    {
+      "name": "Margherita extra",
+      "note": "Adds Parmigiano and a higher proportion of buffalo mozzarella."
+    }
   ],
-  "related_dishes": ["pizza-marinara", "pizza-napoletana", "focaccia"],
-  "compared_to": ["pizza-marinara"],
-  "core_ingredients": ["tomato", "mozzarella", "basil", "00-flour"],
+  "related_dishes": [
+    "pizza-marinara",
+    "pizza-napoletana",
+    "focaccia"
+  ],
+  "compared_to": [
+    "pizza-marinara"
+  ],
+  "core_ingredients": [
+    "tomato",
+    "mozzarella",
+    "basil",
+    "00-flour"
+  ],
   "where_to_eat": [
-    {"name": "L'Antica Pizzeria da Michele", "city": "Naples", "country_slug": "italy", "city_slug": "naples"},
-    {"name": "Pizzeria Starita a Materdei", "city": "Naples", "country_slug": "italy", "city_slug": "naples"},
-    {"name": "Pizzeria Brandi", "city": "Naples", "country_slug": "italy", "city_slug": "naples"}
+    {
+      "name": "L'Antica Pizzeria da Michele",
+      "city": "Naples",
+      "country_slug": "italy",
+      "city_slug": "naples"
+    },
+    {
+      "name": "Pizzeria Starita a Materdei",
+      "city": "Naples",
+      "country_slug": "italy",
+      "city_slug": "naples"
+    },
+    {
+      "name": "Pizzeria Brandi",
+      "city": "Naples",
+      "country_slug": "italy",
+      "city_slug": "naples"
+    }
   ],
   "editorial_score": 4.9,
   "popularity_signal": "global",
   "hero_image": "/img/dish-pizza-margherita.jpg",
   "hero_image_alt": "Neapolitan Margherita pizza with leopard-spotted crust, San Marzano tomato, buffalo mozzarella, fresh basil",
-  "hero_image_source_url": "https://unsplash.com/photos/placeholder-margherita",
+  "hero_image_source_url": "https://worlddishatlas.com/credits/",
   "verified": {
     "source_url": "https://www.pizzanapoletana.org/en/pizza-napoletana-stg",
     "history_evidence_url": "https://www.lacucinaitaliana.com/italian-food/italian-dishes/the-true-story-of-pizza-margherita",
     "checked_on": "2026-06-07"
-  }
+  },
+  "hero_image_credit": "Brand-generated placeholder. Real photography is replacing these as we shoot."
 }

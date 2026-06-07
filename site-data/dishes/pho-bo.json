@@ -10,23 +10,74 @@
   "history": "Pho emerged in northern Vietnam around the turn of the 20th century, most likely from street carts in the Nam Dinh and Hanoi area. French colonial demand for beef created a beef-bone supply the Vietnamese turned into a noodle soup. The northern (Hanoi) style is clear, restrained, deeply beefy with minimal garnish; the southern (Saigon) style that emerged after the 1954 partition is sweeter, herbier, and served with a side plate of basil, bean sprouts, sawtooth herb, lime, and chiles. Pho bo (beef) is the original; pho ga (chicken) followed in the 1930s.",
   "ingredients_summary": "Beef bones, oxtail, brisket, charred ginger and onion, star anise, cloves, cinnamon, cardamom, rice noodles, raw beef slices, fresh herbs.",
   "ingredients": [
-    {"name": "Beef knuckle and marrow bones", "amount": "2kg"},
-    {"name": "Oxtail", "amount": "500g"},
-    {"name": "Brisket", "amount": "500g (whole piece)"},
-    {"name": "Ginger", "amount": "1 large hand, halved"},
-    {"name": "Yellow onions", "amount": "2 large, halved"},
-    {"name": "Star anise", "amount": "8 pods"},
-    {"name": "Whole cloves", "amount": "6"},
-    {"name": "Cinnamon stick", "amount": "1 (5cm)"},
-    {"name": "Black cardamom", "amount": "1 pod"},
-    {"name": "Coriander seeds", "amount": "1 tsp"},
-    {"name": "Fish sauce", "amount": "3 tbsp"},
-    {"name": "Rock sugar", "amount": "1 tbsp"},
-    {"name": "Fresh banh pho rice noodles", "amount": "400g"},
-    {"name": "Eye-round beef", "amount": "300g, frozen 30 min then sliced paper-thin"},
-    {"name": "Scallions", "amount": "4, white and green separated, thin-sliced"},
-    {"name": "Cilantro", "amount": "1 small bunch, chopped"},
-    {"name": "Thai basil, beansprouts, sawtooth herb, lime, Thai chiles", "amount": "for the table (southern style)"}
+    {
+      "name": "Beef knuckle and marrow bones",
+      "amount": "2kg"
+    },
+    {
+      "name": "Oxtail",
+      "amount": "500g"
+    },
+    {
+      "name": "Brisket",
+      "amount": "500g (whole piece)"
+    },
+    {
+      "name": "Ginger",
+      "amount": "1 large hand, halved"
+    },
+    {
+      "name": "Yellow onions",
+      "amount": "2 large, halved"
+    },
+    {
+      "name": "Star anise",
+      "amount": "8 pods"
+    },
+    {
+      "name": "Whole cloves",
+      "amount": "6"
+    },
+    {
+      "name": "Cinnamon stick",
+      "amount": "1 (5cm)"
+    },
+    {
+      "name": "Black cardamom",
+      "amount": "1 pod"
+    },
+    {
+      "name": "Coriander seeds",
+      "amount": "1 tsp"
+    },
+    {
+      "name": "Fish sauce",
+      "amount": "3 tbsp"
+    },
+    {
+      "name": "Rock sugar",
+      "amount": "1 tbsp"
+    },
+    {
+      "name": "Fresh banh pho rice noodles",
+      "amount": "400g"
+    },
+    {
+      "name": "Eye-round beef",
+      "amount": "300g, frozen 30 min then sliced paper-thin"
+    },
+    {
+      "name": "Scallions",
+      "amount": "4, white and green separated, thin-sliced"
+    },
+    {
+      "name": "Cilantro",
+      "amount": "1 small bunch, chopped"
+    },
+    {
+      "name": "Thai basil, beansprouts, sawtooth herb, lime, Thai chiles",
+      "amount": "for the table (southern style)"
+    }
   ],
   "method": [
     "Char the ginger and onions over a flame or under the broiler until blackened on the cut sides. This is the flavour foundation.",
@@ -51,26 +102,64 @@
     "Using thick rice noodles. Banh pho is flat and medium-thin; thick noodles change the dish."
   ],
   "variations": [
-    {"name": "Pho bo Hanoi", "note": "Northern style: restrained, no herb plate, lime and chile optional."},
-    {"name": "Pho bo Saigon", "note": "Southern style: served with a full herb plate, hoisin and sriracha at the table."},
-    {"name": "Pho ga", "note": "Chicken version. Faster broth (3-4 hours), shallot and ginger only."}
+    {
+      "name": "Pho bo Hanoi",
+      "note": "Northern style: restrained, no herb plate, lime and chile optional."
+    },
+    {
+      "name": "Pho bo Saigon",
+      "note": "Southern style: served with a full herb plate, hoisin and sriracha at the table."
+    },
+    {
+      "name": "Pho ga",
+      "note": "Chicken version. Faster broth (3-4 hours), shallot and ginger only."
+    }
   ],
-  "related_dishes": ["pho-ga", "bun-bo-hue", "hu-tieu"],
-  "compared_to": ["pho-ga", "bun-bo-hue"],
-  "core_ingredients": ["beef-bone", "star-anise", "ginger", "fish-sauce", "rice-noodle"],
+  "related_dishes": [
+    "pho-ga",
+    "bun-bo-hue",
+    "hu-tieu"
+  ],
+  "compared_to": [
+    "pho-ga",
+    "bun-bo-hue"
+  ],
+  "core_ingredients": [
+    "beef-bone",
+    "star-anise",
+    "ginger",
+    "fish-sauce",
+    "rice-noodle"
+  ],
   "where_to_eat": [
-    {"name": "Pho Gia Truyen", "city": "Hanoi", "country_slug": "vietnam", "city_slug": "hanoi"},
-    {"name": "Pho Thin Bo Ho", "city": "Hanoi", "country_slug": "vietnam", "city_slug": "hanoi"},
-    {"name": "Pho Hoa Pasteur", "city": "Ho Chi Minh City", "country_slug": "vietnam", "city_slug": "ho-chi-minh-city"}
+    {
+      "name": "Pho Gia Truyen",
+      "city": "Hanoi",
+      "country_slug": "vietnam",
+      "city_slug": "hanoi"
+    },
+    {
+      "name": "Pho Thin Bo Ho",
+      "city": "Hanoi",
+      "country_slug": "vietnam",
+      "city_slug": "hanoi"
+    },
+    {
+      "name": "Pho Hoa Pasteur",
+      "city": "Ho Chi Minh City",
+      "country_slug": "vietnam",
+      "city_slug": "ho-chi-minh-city"
+    }
   ],
   "editorial_score": 4.9,
   "popularity_signal": "global",
   "hero_image": "/img/dish-pho-bo.jpg",
   "hero_image_alt": "Vietnamese pho bo with rare beef, brisket, rice noodles, scallions, cilantro, herb plate on the side",
-  "hero_image_source_url": "https://unsplash.com/photos/placeholder-pho",
+  "hero_image_source_url": "https://worlddishatlas.com/credits/",
   "verified": {
     "source_url": "https://www.viettyworld.com/pho-bo-recipe",
     "history_evidence_url": "https://www.smithsonianmag.com/arts-culture/the-history-of-vietnamese-pho-180977712/",
     "checked_on": "2026-06-07"
-  }
+  },
+  "hero_image_credit": "Brand-generated placeholder. Real photography is replacing these as we shoot."
 }

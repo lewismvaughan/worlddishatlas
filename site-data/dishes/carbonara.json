@@ -10,12 +10,30 @@
   "history": "Carbonara surfaced in Rome around 1944, after American troops arrived with eggs and bacon and Roman cooks turned the rations into a pasta sauce. The first printed recipe ran in the magazine La Cucina Italiana in 1954. The Roman canonical version uses four ingredients: guanciale (cured pork jowl), pecorino romano, egg yolks and black pepper. Cream is not part of any traditional recipe and is the single most-flagged error in modern restaurant versions. The dish takes its name from the Italian word for coal-burner. The most-cited theory connects it to coal-miners eating pasta with bacon and eggs.",
   "ingredients_summary": "Spaghetti, guanciale, pecorino romano, egg yolks, black pepper.",
   "ingredients": [
-    {"name": "Spaghetti", "amount": "400g"},
-    {"name": "Guanciale", "amount": "150g, cut into matchsticks"},
-    {"name": "Pecorino Romano", "amount": "100g, finely grated"},
-    {"name": "Egg yolks", "amount": "4 large, plus 1 whole egg"},
-    {"name": "Black pepper", "amount": "to taste, fresh-cracked"},
-    {"name": "Sea salt", "amount": "for the pasta water"}
+    {
+      "name": "Spaghetti",
+      "amount": "400g"
+    },
+    {
+      "name": "Guanciale",
+      "amount": "150g, cut into matchsticks"
+    },
+    {
+      "name": "Pecorino Romano",
+      "amount": "100g, finely grated"
+    },
+    {
+      "name": "Egg yolks",
+      "amount": "4 large, plus 1 whole egg"
+    },
+    {
+      "name": "Black pepper",
+      "amount": "to taste, fresh-cracked"
+    },
+    {
+      "name": "Sea salt",
+      "amount": "for the pasta water"
+    }
   ],
   "method": [
     "Bring a large pot of well-salted water to a rolling boil. Drop the spaghetti.",
@@ -37,13 +55,34 @@
     "Skimping on the pepper. Pepper is one of the four named ingredients."
   ],
   "variations": [
-    {"name": "Carbonara di mare", "note": "Coastal Italian: swap guanciale for octopus or shrimp. Polarising even in Italy."},
-    {"name": "Tokyo carbonara", "note": "Japanese pasta tradition often adds cream and pancetta. Different dish, same name."},
-    {"name": "Spaghettoni carbonara", "note": "Thicker pasta cut, more recently fashionable in modern Roman restaurants."}
+    {
+      "name": "Carbonara di mare",
+      "note": "Coastal Italian: swap guanciale for octopus or shrimp. Polarising even in Italy."
+    },
+    {
+      "name": "Tokyo carbonara",
+      "note": "Japanese pasta tradition often adds cream and pancetta. Different dish, same name."
+    },
+    {
+      "name": "Spaghettoni carbonara",
+      "note": "Thicker pasta cut, more recently fashionable in modern Roman restaurants."
+    }
   ],
-  "related_dishes": ["cacio-e-pepe", "amatriciana", "gricia"],
-  "compared_to": ["cacio-e-pepe", "amatriciana"],
-  "core_ingredients": ["guanciale", "pecorino-romano", "egg", "black-pepper"],
+  "related_dishes": [
+    "cacio-e-pepe",
+    "amatriciana",
+    "gricia"
+  ],
+  "compared_to": [
+    "cacio-e-pepe",
+    "amatriciana"
+  ],
+  "core_ingredients": [
+    "guanciale",
+    "pecorino-romano",
+    "egg",
+    "black-pepper"
+  ],
   "where_to_eat": [
     {
       "name": "Da Felice a Testaccio",
@@ -64,10 +103,11 @@
   "popularity_signal": "global",
   "hero_image": "/img/dish-carbonara.jpg",
   "hero_image_alt": "Spaghetti carbonara with crispy guanciale, pecorino romano, and fresh-cracked black pepper on a white plate",
-  "hero_image_source_url": "https://unsplash.com/photos/carbonara-placeholder",
+  "hero_image_source_url": "https://worlddishatlas.com/credits/",
   "verified": {
     "source_url": "https://www.lacucinaitaliana.it/ricetta/primi/spaghetti-alla-carbonara/",
     "history_evidence_url": "https://www.lacucinaitaliana.it/news/in-primo-piano/storia-spaghetti-alla-carbonara-quando-nato/",
     "checked_on": "2026-06-07"
-  }
+  },
+  "hero_image_credit": "Brand-generated placeholder. Real photography is replacing these as we shoot."
 }
