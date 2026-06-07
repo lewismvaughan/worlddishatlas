@@ -6,25 +6,25 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#f6f1e6" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#15130e" media="(prefers-color-scheme: dark)">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.meta_description }}">
+    <title>Cookies | WorldDishAtlas</title>
+    <meta name="description" content="WorldDishAtlas cookies. Analytics only; no advertising cookies; respect your browser controls.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Lewis Vaughan">
-    <link rel="canonical" href="{{ page.canonical_url }}">
+    <link rel="canonical" href="https://worlddishatlas.com/cookies/">
 
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.meta_description }}">
-    <meta property="og:url" content="{{ page.canonical_url }}">
-    <meta property="og:type" content="{{ page.og_type | default('article') }}">
-    <meta property="og:image" content="{{ page.og_image }}">
-    <meta property="og:image:alt" content="{{ page.og_image_alt | default(page.title) }}">
+    <meta property="og:title" content="Cookies | WorldDishAtlas">
+    <meta property="og:description" content="WorldDishAtlas cookies. Analytics only; no advertising cookies; respect your browser controls.">
+    <meta property="og:url" content="https://worlddishatlas.com/cookies/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://worlddishatlas.com/img/og-default.jpg">
+    <meta property="og:image:alt" content="Cookies | WorldDishAtlas">
     <meta property="og:site_name" content="WorldDishAtlas">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.meta_description }}">
-    <meta name="twitter:image" content="{{ page.og_image }}">
+    <meta name="twitter:title" content="Cookies | WorldDishAtlas">
+    <meta name="twitter:description" content="WorldDishAtlas cookies. Analytics only; no advertising cookies; respect your browser controls.">
+    <meta name="twitter:image" content="https://worlddishatlas.com/img/og-default.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,37 @@
     }
     </script>
 
-    {% block schema_extra %}{% endblock %}
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://worlddishatlas.com/cookies/#webpage",
+      "url": "https://worlddishatlas.com/cookies/",
+      "name": "Cookies | WorldDishAtlas",
+      "description": "WorldDishAtlas cookies. Analytics only; no advertising cookies; respect your browser controls.",
+      "inLanguage": "en",
+      "isPartOf": {"@id": "https://worlddishatlas.com/#site"},
+      "publisher": {"@id": "https://worlddishatlas.com/#org"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://worlddishatlas.com/cookies/#breadcrumb",
+      "itemListElement": [
+        
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://worlddishatlas.com/" },
+        
+        {"@type": "ListItem", "position": 2, "name": "Cookies" }
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
 
     <link rel="stylesheet" href="/css/base.css">
 </head>
@@ -83,20 +113,44 @@
         </div>
     </header>
 
-    {% block breadcrumb %}
-    {% if page.breadcrumb_items %}
+    
+    
     <nav class="wda-breadcrumbs" aria-label="Breadcrumb">
         <ol>
-            {% for crumb in page.breadcrumb_items %}
-            <li>{% if crumb.url %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% else %}<span aria-current="page">{{ crumb.name }}</span>{% endif %}</li>
-            {% endfor %}
+            
+            <li><a href="https://worlddishatlas.com/">Home</a></li>
+            
+            <li><span aria-current="page">Cookies</span></li>
+            
         </ol>
     </nav>
-    {% endif %}
-    {% endblock %}
+    
+    
 
     <main class="wda-main">
-        {% block content %}{% endblock %}
+        
+<article class="wda-page">
+    <header class="wda-page-header">
+        <h1>Cookies</h1>
+        <p class="wda-page-subtitle">What cookies we set, and why.</p>
+    </header>
+    <div class="wda-page-body">
+        
+<p>What cookies WorldDishAtlas sets, and why.</p>
+<h2>Analytics</h2>
+<p>Google Tag Manager and Microsoft Clarity each set their own cookies
+to measure page views, sessions and on-page behaviour. These are
+anonymized.</p>
+<h2>No advertising cookies</h2>
+<p>We do not run third-party advertising at this time, so no advertising
+cookies are set.</p>
+<h2>Control</h2>
+<p>Use your browser's cookie controls to clear or block cookies. Most
+of the site works without them.</p>
+
+    </div>
+</article>
+
     </main>
 
     <footer class="wda-footer">

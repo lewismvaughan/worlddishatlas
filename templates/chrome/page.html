@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block schema_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": {{ ({"webpage":"WebPage","collection":"CollectionPage","about":"AboutPage","contact":"ContactPage"}[page.page_type] | default("WebPage")) | tojson }},
+      "@id": "{{ page.canonical_url }}#webpage",
+      "url": {{ page.canonical_url | tojson }},
+      "name": {{ page.title | tojson }},
+      "description": {{ page.meta_description | tojson }},
+      "inLanguage": "en",
+      "isPartOf": {"@id": "https://worlddishatlas.com/#site"},
+      "publisher": {"@id": "https://worlddishatlas.com/#org"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {% for crumb in page.breadcrumb_items %}
+        {"@type": "ListItem", "position": {{ loop.index }}, "name": {{ crumb.name | tojson }}{% if crumb.url %}, "item": {{ crumb.url | tojson }}{% endif %} }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+    {% if page.schema_person %}
+    ,{
+      "@type": "Person",
+      "@id": "{{ page.schema_person.url }}#person",
+      "name": {{ page.schema_person.name | tojson }},
+      "url": {{ page.schema_person.url | tojson }},
+      {% if page.schema_person.image %}"image": {{ page.schema_person.image | tojson }},{% endif %}
+      "jobTitle": {{ page.schema_person.jobTitle | tojson }},
+      "worksFor": {
+        "@type": "Organization",
+        "name": {{ page.schema_person.worksFor.name | tojson }},
+        "url": {{ page.schema_person.worksFor.url | tojson }}
+      },
+      "sameAs": {{ page.schema_person.sameAs | tojson }}
+    }
+    {% endif %}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="wda-page">
+    <header class="wda-page-header">
+        <h1>{{ page.h1 }}</h1>
+        {% if page.subtitle %}<p class="wda-page-subtitle">{{ page.subtitle }}</p>{% endif %}
+    </header>
+    <div class="wda-page-body">
+        {{ page.body_html | safe }}
+    </div>
+</article>
+{% endblock %}

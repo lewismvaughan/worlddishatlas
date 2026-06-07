@@ -1,0 +1,44 @@
+{
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "effortLevel": "high",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/claude-hooks/ack-message.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/claude-hooks/context-check.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/opt/claude-hooks/context-check.sh"
+          },
+          {
+            "type": "command",
+            "command": "/opt/claude-hooks/relay-response.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

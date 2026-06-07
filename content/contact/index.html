@@ -6,25 +6,25 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#f6f1e6" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#15130e" media="(prefers-color-scheme: dark)">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.meta_description }}">
+    <title>Contact WorldDishAtlas | WorldDishAtlas</title>
+    <meta name="description" content="Contact the WorldDishAtlas editorial desk. Press, corrections, story tips, partnership inquiries, and dish recommendations all go through here.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Lewis Vaughan">
-    <link rel="canonical" href="{{ page.canonical_url }}">
+    <link rel="canonical" href="https://worlddishatlas.com/contact/">
 
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.meta_description }}">
-    <meta property="og:url" content="{{ page.canonical_url }}">
-    <meta property="og:type" content="{{ page.og_type | default('article') }}">
-    <meta property="og:image" content="{{ page.og_image }}">
-    <meta property="og:image:alt" content="{{ page.og_image_alt | default(page.title) }}">
+    <meta property="og:title" content="Contact WorldDishAtlas | WorldDishAtlas">
+    <meta property="og:description" content="Contact the WorldDishAtlas editorial desk. Press, corrections, story tips, partnership inquiries, and dish recommendations all go through here.">
+    <meta property="og:url" content="https://worlddishatlas.com/contact/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://worlddishatlas.com/img/og-default.jpg">
+    <meta property="og:image:alt" content="Contact WorldDishAtlas | WorldDishAtlas">
     <meta property="og:site_name" content="WorldDishAtlas">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.meta_description }}">
-    <meta name="twitter:image" content="{{ page.og_image }}">
+    <meta name="twitter:title" content="Contact WorldDishAtlas | WorldDishAtlas">
+    <meta name="twitter:description" content="Contact the WorldDishAtlas editorial desk. Press, corrections, story tips, partnership inquiries, and dish recommendations all go through here.">
+    <meta name="twitter:image" content="https://worlddishatlas.com/img/og-default.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,37 @@
     }
     </script>
 
-    {% block schema_extra %}{% endblock %}
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://worlddishatlas.com/contact/#webpage",
+      "url": "https://worlddishatlas.com/contact/",
+      "name": "Contact WorldDishAtlas | WorldDishAtlas",
+      "description": "Contact the WorldDishAtlas editorial desk. Press, corrections, story tips, partnership inquiries, and dish recommendations all go through here.",
+      "inLanguage": "en",
+      "isPartOf": {"@id": "https://worlddishatlas.com/#site"},
+      "publisher": {"@id": "https://worlddishatlas.com/#org"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://worlddishatlas.com/contact/#breadcrumb",
+      "itemListElement": [
+        
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://worlddishatlas.com/" },
+        
+        {"@type": "ListItem", "position": 2, "name": "Contact" }
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
 
     <link rel="stylesheet" href="/css/base.css">
 </head>
@@ -83,20 +113,47 @@
         </div>
     </header>
 
-    {% block breadcrumb %}
-    {% if page.breadcrumb_items %}
+    
+    
     <nav class="wda-breadcrumbs" aria-label="Breadcrumb">
         <ol>
-            {% for crumb in page.breadcrumb_items %}
-            <li>{% if crumb.url %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% else %}<span aria-current="page">{{ crumb.name }}</span>{% endif %}</li>
-            {% endfor %}
+            
+            <li><a href="https://worlddishatlas.com/">Home</a></li>
+            
+            <li><span aria-current="page">Contact</span></li>
+            
         </ol>
     </nav>
-    {% endif %}
-    {% endblock %}
+    
+    
 
     <main class="wda-main">
-        {% block content %}{% endblock %}
+        
+<article class="wda-page">
+    <header class="wda-page-header">
+        <h1>Contact WorldDishAtlas</h1>
+        <p class="wda-page-subtitle">Email is the fastest way.</p>
+    </header>
+    <div class="wda-page-body">
+        
+<p>The fastest way to reach the WorldDishAtlas editorial desk is email.</p>
+
+<h2>Editorial</h2>
+<p>For corrections, story tips, dishes you think we should cover, or
+recommendations on where the canonical version of a dish lives, email
+<strong>hello@worlddishatlas.com</strong>.</p>
+
+<h2>Press and partnerships</h2>
+<p>For press inquiries, partnership ideas, or to syndicate any of our
+dish guides, email <strong>press@worlddishatlas.com</strong>.</p>
+
+<h2>Lewis</h2>
+<p>For anything else, the editor reads every email. See <a
+href="/about/lewis/">about Lewis</a> for context.</p>
+
+    </div>
+</article>
+
     </main>
 
     <footer class="wda-footer">

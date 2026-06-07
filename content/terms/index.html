@@ -6,25 +6,25 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#f6f1e6" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#15130e" media="(prefers-color-scheme: dark)">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.meta_description }}">
+    <title>Terms | WorldDishAtlas</title>
+    <meta name="description" content="WorldDishAtlas terms of use. Editorial content, not legal or medical advice. Use at your own risk. Copyright and affiliate disclosures.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Lewis Vaughan">
-    <link rel="canonical" href="{{ page.canonical_url }}">
+    <link rel="canonical" href="https://worlddishatlas.com/terms/">
 
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.meta_description }}">
-    <meta property="og:url" content="{{ page.canonical_url }}">
-    <meta property="og:type" content="{{ page.og_type | default('article') }}">
-    <meta property="og:image" content="{{ page.og_image }}">
-    <meta property="og:image:alt" content="{{ page.og_image_alt | default(page.title) }}">
+    <meta property="og:title" content="Terms | WorldDishAtlas">
+    <meta property="og:description" content="WorldDishAtlas terms of use. Editorial content, not legal or medical advice. Use at your own risk. Copyright and affiliate disclosures.">
+    <meta property="og:url" content="https://worlddishatlas.com/terms/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://worlddishatlas.com/img/og-default.jpg">
+    <meta property="og:image:alt" content="Terms | WorldDishAtlas">
     <meta property="og:site_name" content="WorldDishAtlas">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.meta_description }}">
-    <meta name="twitter:image" content="{{ page.og_image }}">
+    <meta name="twitter:title" content="Terms | WorldDishAtlas">
+    <meta name="twitter:description" content="WorldDishAtlas terms of use. Editorial content, not legal or medical advice. Use at your own risk. Copyright and affiliate disclosures.">
+    <meta name="twitter:image" content="https://worlddishatlas.com/img/og-default.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,37 @@
     }
     </script>
 
-    {% block schema_extra %}{% endblock %}
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://worlddishatlas.com/terms/#webpage",
+      "url": "https://worlddishatlas.com/terms/",
+      "name": "Terms | WorldDishAtlas",
+      "description": "WorldDishAtlas terms of use. Editorial content, not legal or medical advice. Use at your own risk. Copyright and affiliate disclosures.",
+      "inLanguage": "en",
+      "isPartOf": {"@id": "https://worlddishatlas.com/#site"},
+      "publisher": {"@id": "https://worlddishatlas.com/#org"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://worlddishatlas.com/terms/#breadcrumb",
+      "itemListElement": [
+        
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://worlddishatlas.com/" },
+        
+        {"@type": "ListItem", "position": 2, "name": "Terms" }
+        
+      ]
+    }
+    
+  ]
+}
+</script>
+
 
     <link rel="stylesheet" href="/css/base.css">
 </head>
@@ -83,20 +113,60 @@
         </div>
     </header>
 
-    {% block breadcrumb %}
-    {% if page.breadcrumb_items %}
+    
+    
     <nav class="wda-breadcrumbs" aria-label="Breadcrumb">
         <ol>
-            {% for crumb in page.breadcrumb_items %}
-            <li>{% if crumb.url %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% else %}<span aria-current="page">{{ crumb.name }}</span>{% endif %}</li>
-            {% endfor %}
+            
+            <li><a href="https://worlddishatlas.com/">Home</a></li>
+            
+            <li><span aria-current="page">Terms</span></li>
+            
         </ol>
     </nav>
-    {% endif %}
-    {% endblock %}
+    
+    
 
     <main class="wda-main">
-        {% block content %}{% endblock %}
+        
+<article class="wda-page">
+    <header class="wda-page-header">
+        <h1>Terms</h1>
+        <p class="wda-page-subtitle">The ground rules.</p>
+    </header>
+    <div class="wda-page-body">
+        
+<p>WorldDishAtlas is an editorial publication. By using this site you
+agree to the following.</p>
+
+<h2>1. Content is editorial, not legal or medical advice</h2>
+<p>The recipes, histories, and where-to-eat recommendations on this site
+are editorial. They are not professional culinary, dietary, medical, or
+legal advice. If you have a food allergy, an intolerance, or a medical
+restriction, consult a qualified professional.</p>
+
+<h2>2. Use at your own risk</h2>
+<p>Recipes are tested by the editor but not in your kitchen. Cooking
+involves heat, sharp tools, and raw ingredients. You are responsible for
+your own kitchen safety.</p>
+
+<h2>3. Affiliate links</h2>
+<p>Some links on this site may be affiliate links. Affiliate revenue
+plays no part in editorial selection. If a venue or product is bad, it
+gets that verdict and the affiliate link goes away.</p>
+
+<h2>4. Copyright</h2>
+<p>All editorial content on this site, including dish histories,
+recipes, and photography, is copyright WorldDishAtlas. Quote freely with
+attribution; do not republish wholesale without written permission.</p>
+
+<h2>5. Changes</h2>
+<p>We may update these terms occasionally. Material changes will be
+called out on the home page.</p>
+
+    </div>
+</article>
+
     </main>
 
     <footer class="wda-footer">
