@@ -322,7 +322,7 @@ PAGES = [
      "breadcrumb": crumb(("Home", f"{BASE}/"), ("Terms", None))},
     {"slug": "cookies", "title": "Cookies",
      "subtitle": "What cookies we set, and why.",
-     "meta_description": "WorldDishAtlas cookies. Analytics only (Google Tag Manager, Microsoft Clarity); no advertising cookies; your browser controls are respected. Full detail inside.",
+     "meta_description": "WorldDishAtlas cookies. Analytics only (Google Tag Manager, Microsoft Clarity); no advertising cookies; browser controls respected.",
      "page_type": "webpage", "body": _cookies_html(),
      "breadcrumb": crumb(("Home", f"{BASE}/"), ("Cookies", None))},
     {"slug": "disclaimer", "title": "Disclaimer",

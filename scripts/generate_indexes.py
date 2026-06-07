@@ -82,7 +82,7 @@ def main() -> int:
                "All dishes",
                "Every dish on WorldDishAtlas",
                f"{len(sorted_dishes)} dishes and counting.",
-               f"Every dish on WorldDishAtlas, A to Z. Canonical recipes, the history of each dish, common variations, and where to eat the definitive version in the dish's canonical city.",
+               f"Every dish on WorldDishAtlas, A to Z. Canonical recipes, the history of each dish, variations, and where to eat the canonical version.",
                sorted_dishes,
                [{"name": "Home", "url": f"{BASE}/"},
                 {"name": "Dishes"}])
@@ -99,7 +99,7 @@ def main() -> int:
                  "Cuisines",
                  "Browse by cuisine",
                  "Every cuisine covered on WorldDishAtlas.",
-                 "Browse WorldDishAtlas by cuisine. Italian, French, Japanese, Thai, Mexican, Vietnamese, and more. Every dish covered, with canonical recipes and dish histories.",
+                 "Browse WorldDishAtlas by cuisine. Italian, Japanese, Thai, Mexican, Vietnamese, and more. Every dish with canonical recipes and dish histories.",
                  cuisine_items, "cuisine",
                  [{"name": "Home", "url": f"{BASE}/"},
                   {"name": "Cuisines"}])
@@ -116,7 +116,7 @@ def main() -> int:
                    f"{cuisine} dishes",
                    f"{cuisine} dishes",
                    f"The {cuisine.lower()} canon, dish by dish.",
-                   f"Every {cuisine} dish on WorldDishAtlas. Canonical recipes, history of each dish, common variations, and where to eat the definitive version. Verified, edited by humans.",
+                   f"Every {cuisine} dish on WorldDishAtlas. Canonical recipes, dish histories, variations, and where to eat each at its source. Verified, edited by humans.",
                    sorted(dlist, key=lambda d: d["name"]),
                    [{"name": "Home", "url": f"{BASE}/"},
                     {"name": "Cuisines", "url": f"{BASE}/cuisine/"},
@@ -138,7 +138,7 @@ def main() -> int:
                  "Ingredients",
                  "Browse by ingredient",
                  "Discover dishes by the ingredients they share.",
-                 "Browse WorldDishAtlas by ingredient. Find every dish that uses guanciale, fish sauce, saffron, tamarind, kombu, achiote, and dozens more. Cross-cuisine ingredient discovery.",
+                 "Browse WorldDishAtlas by ingredient. Find every dish that uses guanciale, fish sauce, tamarind, kombu, achiote, and more. Cross-cuisine discovery.",
                  ingredient_items, "ingredient",
                  [{"name": "Home", "url": f"{BASE}/"},
                   {"name": "Ingredients"}])
@@ -149,7 +149,7 @@ def main() -> int:
                    f"Dishes with {name}",
                    f"Dishes with {name}",
                    f"Every dish on WorldDishAtlas built around {name.lower()}.",
-                   f"Every dish on WorldDishAtlas built around {name.lower()}. Canonical recipes, cuisines that use {name.lower()}, and where to eat each dish at its source.",
+                   f"Every dish on WorldDishAtlas built around {name.lower()}. Canonical recipes, cuisines that use it, and where to eat each dish at its source.",
                    sorted(dlist, key=lambda d: d["name"]),
                    [{"name": "Home", "url": f"{BASE}/"},
                     {"name": "Ingredients", "url": f"{BASE}/ingredient/"},
@@ -167,7 +167,7 @@ def main() -> int:
                    f"{cat.title()} dishes",
                    f"{cat.title()} dishes",
                    f"The {cat} canon, dish by dish.",
-                   f"Every {cat} dish on WorldDishAtlas. Canonical recipes, dish histories, regional variations, and where to eat the definitive version. Edited by humans, verified provenance.",
+                   f"Every {cat} dish on WorldDishAtlas. Canonical recipes, dish histories, regional variations, and where to eat. Edited by humans, verified provenance.",
                    sorted(dlist, key=lambda d: d["name"]),
                    [{"name": "Home", "url": f"{BASE}/"},
                     {"name": cat.title()}])
