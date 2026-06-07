@@ -1,0 +1,73 @@
+{
+  "slug": "carbonara",
+  "name": "Carbonara",
+  "name_native": "Spaghetti alla carbonara",
+  "cuisine": "Italian",
+  "category": "pasta",
+  "region": "Lazio",
+  "country": "Italy",
+  "description": "Roman pasta of guanciale, eggs, pecorino romano and black pepper. Four ingredients, no cream, served immediately. The most-copied and most-corrupted dish in Italian cooking.",
+  "history": "Carbonara surfaced in Rome around 1944, after American troops arrived with eggs and bacon and Roman cooks turned the rations into a pasta sauce. The first printed recipe ran in the magazine La Cucina Italiana in 1954. The Roman canonical version uses four ingredients: guanciale (cured pork jowl), pecorino romano, egg yolks and black pepper. Cream is not part of any traditional recipe and is the single most-flagged error in modern restaurant versions. The dish takes its name from the Italian word for coal-burner. The most-cited theory connects it to coal-miners eating pasta with bacon and eggs.",
+  "ingredients_summary": "Spaghetti, guanciale, pecorino romano, egg yolks, black pepper.",
+  "ingredients": [
+    {"name": "Spaghetti", "amount": "400g"},
+    {"name": "Guanciale", "amount": "150g, cut into matchsticks"},
+    {"name": "Pecorino Romano", "amount": "100g, finely grated"},
+    {"name": "Egg yolks", "amount": "4 large, plus 1 whole egg"},
+    {"name": "Black pepper", "amount": "to taste, fresh-cracked"},
+    {"name": "Sea salt", "amount": "for the pasta water"}
+  ],
+  "method": [
+    "Bring a large pot of well-salted water to a rolling boil. Drop the spaghetti.",
+    "While the pasta cooks, render the guanciale in a wide dry pan over medium heat until the fat is golden and the pieces are crisp at the edges. Do not brown. Cut the heat.",
+    "In a bowl, whisk the egg yolks, the whole egg, the grated pecorino, and a generous amount of fresh-cracked black pepper into a paste.",
+    "When the spaghetti is one minute short of al dente, transfer it directly into the guanciale pan with tongs. Add a ladle of pasta water and toss for thirty seconds so the starch coats the strands.",
+    "Off the heat: pour the egg-cheese mixture over the pasta and toss vigorously. The residual heat cooks the eggs to a glossy sauce. If the sauce tightens, loosen with more pasta water, one tablespoon at a time.",
+    "Plate immediately. Finish with more pecorino and another crack of pepper."
+  ],
+  "serves": 4,
+  "prep_time": "PT15M",
+  "cook_time": "PT15M",
+  "total_time": "PT30M",
+  "tip": "The single skill is temperature control. The pan must be OFF the heat when the eggs go in. Toss for fifteen seconds before adding pasta water. The residual heat from the pasta and the pan does the cooking.",
+  "common_mistakes": [
+    "Adding cream. No traditional Roman recipe uses cream; it is a postwar American simplification.",
+    "Using bacon or pancetta in place of guanciale. The fat profile of jowl is the whole point of the dish.",
+    "Adding the egg mixture over heat. The eggs scramble. Toss off the heat.",
+    "Skimping on the pepper. Pepper is one of the four named ingredients."
+  ],
+  "variations": [
+    {"name": "Carbonara di mare", "note": "Coastal Italian: swap guanciale for octopus or shrimp. Polarising even in Italy."},
+    {"name": "Tokyo carbonara", "note": "Japanese pasta tradition often adds cream and pancetta. Different dish, same name."},
+    {"name": "Spaghettoni carbonara", "note": "Thicker pasta cut, more recently fashionable in modern Roman restaurants."}
+  ],
+  "related_dishes": ["cacio-e-pepe", "amatriciana", "gricia"],
+  "compared_to": ["cacio-e-pepe", "amatriciana"],
+  "core_ingredients": ["guanciale", "pecorino-romano", "egg", "black-pepper"],
+  "where_to_eat": [
+    {
+      "name": "Da Felice a Testaccio",
+      "city": "Rome",
+      "country_slug": "italy",
+      "city_slug": "rome",
+      "tablejourney_url": "/italy/rome/restaurants/da-felice/"
+    },
+    {
+      "name": "Roscioli",
+      "city": "Rome",
+      "country_slug": "italy",
+      "city_slug": "rome",
+      "tablejourney_url": "/italy/rome/restaurants/roscioli/"
+    }
+  ],
+  "editorial_score": 4.9,
+  "popularity_signal": "global",
+  "hero_image": "/img/dish-carbonara.jpg",
+  "hero_image_alt": "Spaghetti carbonara with crispy guanciale, pecorino romano, and fresh-cracked black pepper on a white plate",
+  "hero_image_source_url": "https://unsplash.com/photos/carbonara-placeholder",
+  "verified": {
+    "source_url": "https://www.lacucinaitaliana.it/ricetta/primi/spaghetti-alla-carbonara/",
+    "history_evidence_url": "https://www.lacucinaitaliana.it/news/in-primo-piano/storia-spaghetti-alla-carbonara-quando-nato/",
+    "checked_on": "2026-06-07"
+  }
+}

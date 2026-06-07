@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block schema_extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "{{ page.canonical_url }}#article",
+      "headline": {{ dish.name | tojson }},
+      "description": {{ dish.description | tojson }},
+      "image": {{ page.og_image | tojson }},
+      "datePublished": "{{ dish.verified.checked_on }}T00:00:00Z",
+      "dateModified": "{{ dish.verified.checked_on }}T00:00:00Z",
+      "author": {
+        "@type": "Person",
+        "@id": "https://worlddishatlas.com/about/lewis/#person",
+        "name": "Lewis Vaughan",
+        "url": "https://worlddishatlas.com/about/lewis/"
+      },
+      "publisher": {"@id": "https://worlddishatlas.com/#org"},
+      "mainEntityOfPage": {{ page.canonical_url | tojson }},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Recipe",
+      "@id": "{{ page.canonical_url }}#recipe",
+      "name": {{ dish.name | tojson }},
+      "image": {{ page.og_image | tojson }},
+      "description": {{ dish.description | tojson }},
+      "author": {"@id": "https://worlddishatlas.com/about/lewis/#person"},
+      "datePublished": "{{ dish.verified.checked_on }}T00:00:00Z",
+      "recipeCuisine": {{ dish.cuisine | tojson }},
+      "recipeCategory": {{ dish.category | tojson }}{% if dish.serves %},
+      "recipeYield": {{ ((dish.serves | string) + ' servings') | tojson }}{% endif %}{% if dish.prep_time %},
+      "prepTime": {{ dish.prep_time | tojson }}{% endif %}{% if dish.cook_time %},
+      "cookTime": {{ dish.cook_time | tojson }}{% endif %}{% if dish.total_time %},
+      "totalTime": {{ dish.total_time | tojson }}{% endif %},
+      "recipeIngredient": [
+        {% for ing in dish.ingredients %}{{ ((ing.amount + ' ' + ing.name) if ing.amount else ing.name) | tojson }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
+      "recipeInstructions": [
+        {% for step in dish.method %}
+        {"@type": "HowToStep", "text": {{ step | tojson }}{% if loop.index == 1 %}, "position": 1{% endif %}}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {% for crumb in page.breadcrumb_items %}
+        {"@type": "ListItem", "position": {{ loop.index }}, "name": {{ crumb.name | tojson }}{% if crumb.url %}, "item": {{ crumb.url | tojson }}{% endif %} }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="wda-dish">
+    <header class="wda-dish-header">
+        <h1>{{ dish.name }}</h1>
+        {% if dish.name_native and dish.name_native != dish.name %}
+        <p class="wda-dish-native"><em>{{ dish.name_native }}</em></p>
+        {% endif %}
+        <div class="wda-dish-meta">
+            <span><a href="/cuisine/{{ dish.cuisine | lower | replace(' ', '-') }}/">{{ dish.cuisine }}</a></span>
+            <span>{{ dish.category | title }}</span>
+            {% if dish.region %}<span>{{ dish.region }}</span>{% endif %}
+        </div>
+    </header>
+
+    {% if dish.hero_image %}
+    <figure class="wda-dish-hero">
+        <img src="{{ dish.hero_image }}" alt="{{ dish.hero_image_alt }}"
+             width="1200" height="675"
+             fetchpriority="high" decoding="async">
+    </figure>
+    {% endif %}
+
+    <section class="wda-dish-intro">
+        <p class="wda-lede">{{ dish.description }}</p>
+    </section>
+
+    <section class="wda-dish-history" id="history">
+        <h2>The story</h2>
+        <p>{{ dish.history }}</p>
+    </section>
+
+    {% if dish.variations %}
+    <section class="wda-dish-variations" id="variations">
+        <h2>Variations</h2>
+        <ul>
+            {% for v in dish.variations %}
+            <li><strong>{{ v.name }}.</strong> {{ v.note }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    <section class="wda-dish-recipe" id="recipe">
+        <h2>How to make {{ dish.name }}</h2>
+        <div class="wda-recipe-meta">
+            {% if dish.serves %}<span><strong>Serves:</strong> {{ dish.serves }}</span>{% endif %}
+            {% if dish.prep_time %}<span><strong>Prep:</strong> {{ dish.prep_time | replace('PT','') | replace('M',' min') | replace('H',' hr ') }}</span>{% endif %}
+            {% if dish.cook_time %}<span><strong>Cook:</strong> {{ dish.cook_time | replace('PT','') | replace('M',' min') | replace('H',' hr ') }}</span>{% endif %}
+        </div>
+        <h3>Ingredients</h3>
+        <ul class="wda-ingredients">
+            {% for ing in dish.ingredients %}
+            <li>{% if ing.amount %}<strong>{{ ing.amount }}</strong> {% endif %}{{ ing.name }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Method</h3>
+        <ol class="wda-method">
+            {% for step in dish.method %}
+            <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+        {% if dish.tip %}
+        <p class="wda-tip"><strong>Editor's tip.</strong> {{ dish.tip }}</p>
+        {% endif %}
+    </section>
+
+    {% if dish.common_mistakes %}
+    <section class="wda-dish-mistakes">
+        <h2>Common mistakes</h2>
+        <ul>
+            {% for m in dish.common_mistakes %}<li>{{ m }}</li>{% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if dish.where_to_eat %}
+    <section class="wda-dish-where" id="where-to-eat">
+        <h2>Where to eat {{ dish.name }}</h2>
+        <ul class="wda-where-list">
+            {% for w in dish.where_to_eat %}
+            <li>
+                <strong>{{ w.name }}</strong>, {{ w.city }}.
+                {% if w.tablejourney_url %}<a href="https://tablejourney.com{{ w.tablejourney_url }}" rel="noopener">Read the TableJourney guide</a>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% if dish.related_dishes %}
+    <section class="wda-dish-related">
+        <h2>Related dishes</h2>
+        <ul class="wda-related-list">
+            {% for r in dish.related_dishes %}
+            <li><a href="/dish/{{ r }}/">{{ r | replace('-', ' ') | title }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    <footer class="wda-dish-footer">
+        <p class="wda-byline">
+            Edited by <a href="/about/lewis/">Lewis Vaughan</a>.
+            Last verified <time datetime="{{ dish.verified.checked_on }}">{{ dish.verified.checked_on }}</time>.
+            See <a href="/methodology/">methodology</a> for how every claim is verified.
+        </p>
+    </footer>
+</article>
+{% endblock %}

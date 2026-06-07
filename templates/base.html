@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.meta_description }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Lewis Vaughan">
+    <link rel="canonical" href="{{ page.canonical_url }}">
+
+    {# Open Graph #}
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.meta_description }}">
+    <meta property="og:url" content="{{ page.canonical_url }}">
+    <meta property="og:type" content="{{ page.og_type | default('article') }}">
+    <meta property="og:image" content="{{ page.og_image }}">
+    <meta property="og:image:alt" content="{{ page.og_image_alt | default(page.title) }}">
+    <meta property="og:site_name" content="WorldDishAtlas">
+    <meta property="og:locale" content="en_US">
+
+    {# Twitter card #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.meta_description }}">
+    <meta name="twitter:image" content="{{ page.og_image }}">
+
+    {# Pre-connect for performance #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {# Schema.org Organization + WebSite — sitewide #}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://worlddishatlas.com/#org",
+          "name": "WorldDishAtlas",
+          "url": "https://worlddishatlas.com",
+          "logo": "https://worlddishatlas.com/img/logo.png",
+          "sameAs": ["https://tablejourney.com"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://worlddishatlas.com/#site",
+          "name": "WorldDishAtlas",
+          "url": "https://worlddishatlas.com",
+          "inLanguage": "en",
+          "publisher": {"@id": "https://worlddishatlas.com/#org"},
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {"@type": "EntryPoint", "urlTemplate": "https://worlddishatlas.com/search/?q={search_term_string}"},
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+
+    {% block schema_extra %}{% endblock %}
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+    <header class="wda-nav">
+        <div class="wda-nav-inner">
+            <a class="wda-brand" href="/">World<span class="wda-brand-mark">DishAtlas</span></a>
+            <nav class="wda-nav-links" aria-label="Primary">
+                <a href="/cuisine/">Cuisines</a>
+                <a href="/ingredient/">Ingredients</a>
+                <a href="/about/">About</a>
+                <a href="/methodology/">Methodology</a>
+            </nav>
+        </div>
+    </header>
+
+    {% block breadcrumb %}
+    {% if page.breadcrumb_items %}
+    <nav class="wda-breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+            {% for crumb in page.breadcrumb_items %}
+            <li>{% if crumb.url %}<a href="{{ crumb.url }}">{{ crumb.name }}</a>{% else %}<span aria-current="page">{{ crumb.name }}</span>{% endif %}</li>
+            {% endfor %}
+        </ol>
+    </nav>
+    {% endif %}
+    {% endblock %}
+
+    <main class="wda-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="wda-footer">
+        <div class="wda-footer-inner">
+            <p>
+                <a href="/about/">About</a> &middot;
+                <a href="/about/lewis/">Editor</a> &middot;
+                <a href="/methodology/">Methodology</a> &middot;
+                <a href="/contact/">Contact</a> &middot;
+                <a href="/privacy/">Privacy</a>
+            </p>
+            <p class="wda-footer-credit">
+                WorldDishAtlas. Edited by <a href="/about/lewis/">Lewis Vaughan</a>.
+                Sister site to <a href="https://tablejourney.com" rel="noopener">TableJourney</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
