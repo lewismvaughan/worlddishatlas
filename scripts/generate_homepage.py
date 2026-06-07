@@ -2,10 +2,20 @@
 """Render content/index.html from all available dishes."""
 
 import json
+import os
 from collections import Counter
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+
+def _analytics():
+    return {
+        "gtm_id": os.environ.get("WDA_GTM_CONTAINER_ID", ""),
+        "clarity_id": os.environ.get("WDA_CLARITY_PROJECT_ID", ""),
+        "gsc_token": os.environ.get("WDA_GSC_VERIFICATION", ""),
+        "bing_token": os.environ.get("WDA_BING_VERIFICATION", ""),
+    }
 
 REPO = Path(__file__).resolve().parent.parent
 CONTENT = REPO / "content"
@@ -69,7 +79,7 @@ def main() -> int:
         "breadcrumb_items": [],
     }
     tpl = env.get_template("home.html")
-    html = tpl.render(
+    html = tpl.render(analytics=_analytics(), 
         page=page,
         featured_dishes=featured,
         cuisines=cuisines,

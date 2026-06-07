@@ -6,9 +6,19 @@ comparison page in canonical alphabetical order (a-vs-b, never b-vs-a).
 Dedup pairs so each combo only renders once.
 """
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+
+def _analytics():
+    return {
+        "gtm_id": os.environ.get("WDA_GTM_CONTAINER_ID", ""),
+        "clarity_id": os.environ.get("WDA_CLARITY_PROJECT_ID", ""),
+        "gsc_token": os.environ.get("WDA_GSC_VERIFICATION", ""),
+        "bing_token": os.environ.get("WDA_BING_VERIFICATION", ""),
+    }
 
 REPO = Path(__file__).resolve().parent.parent
 CONTENT = REPO / 'content'
@@ -69,7 +79,7 @@ def render_comparison(env, a, b, now_iso):
         ],
     }
     tpl = env.get_template('compare.html')
-    html = tpl.render(page=page, a=a, b=b, intro=intro,
+    html = tpl.render(page=page, analytics=_analytics(), a=a, b=b, intro=intro,
                       short_version=short, shared_ingredients=shared,
                       now_iso=now_iso)
     out = CONTENT / 'compare' / slug / 'index.html'
@@ -101,7 +111,7 @@ def render_compare_index(env, pairs):
               'subtitle': f"{pair[0]['cuisine']} vs {pair[1]['cuisine']}"}
              for pair in pairs]
     tpl = env.get_template('index_grid.html')
-    html = tpl.render(page=page, items=items, item_kind='comparison')
+    html = tpl.render(page=page, analytics=_analytics(), items=items, item_kind='comparison')
     out = CONTENT / 'compare' / 'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding='utf-8')

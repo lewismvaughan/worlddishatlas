@@ -6,10 +6,20 @@ One script for all hub-style pages because they share data + template.
 """
 
 import json
+import os
 from collections import Counter, defaultdict
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+
+def _analytics():
+    return {
+        "gtm_id": os.environ.get("WDA_GTM_CONTAINER_ID", ""),
+        "clarity_id": os.environ.get("WDA_CLARITY_PROJECT_ID", ""),
+        "gsc_token": os.environ.get("WDA_GSC_VERIFICATION", ""),
+        "bing_token": os.environ.get("WDA_BING_VERIFICATION", ""),
+    }
 
 REPO = Path(__file__).resolve().parent.parent
 CONTENT = REPO / "content"
@@ -43,7 +53,7 @@ def render_hub(env, slug_path: str, title: str, h1: str, subtitle: str,
         "page_type": "collection",
     }
     tpl = env.get_template("hub.html")
-    html = tpl.render(page=page, dishes=dishes)
+    html = tpl.render(page=page, analytics=_analytics(), dishes=dishes)
     out = CONTENT / slug_path / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")
@@ -64,7 +74,7 @@ def render_index(env, slug_path: str, title: str, h1: str, subtitle: str,
         "page_type": "collection",
     }
     tpl = env.get_template("index_grid.html")
-    html = tpl.render(page=page, items=items, item_kind=item_kind)
+    html = tpl.render(page=page, analytics=_analytics(), items=items, item_kind=item_kind)
     out = CONTENT / slug_path / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")

@@ -14,6 +14,15 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+
+def _analytics():
+    return {
+        "gtm_id": os.environ.get("WDA_GTM_CONTAINER_ID", ""),
+        "clarity_id": os.environ.get("WDA_CLARITY_PROJECT_ID", ""),
+        "gsc_token": os.environ.get("WDA_GSC_VERIFICATION", ""),
+        "bing_token": os.environ.get("WDA_BING_VERIFICATION", ""),
+    }
+
 REPO = Path(__file__).resolve().parent.parent
 CONTENT = REPO / "content"
 TEMPLATES = REPO / "templates"
@@ -349,7 +358,7 @@ def render_page(env, spec):
         "schema_person": spec.get("schema_person"),
     }
     template = env.get_template("chrome/page.html")
-    html = template.render(page=page_ctx)
+    html = template.render(page=page_ctx, analytics=_analytics())
     out = CONTENT / spec["slug"] / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")

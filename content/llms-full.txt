@@ -28,7 +28,7 @@ Cacio e pepe is the older sibling of the Roman pasta family that includes gricia
 
 **Tip.** Grate the pecorino so fine it almost looks like powder. Coarsely grated cheese will not melt evenly and you will end up with the dreaded cheese ball.
 
-Source: https://www.lacucinaitaliana.it/ricetta/primi/cacio-e-pepe/. History: https://www.lacucinaitaliana.it/news/in-primo-piano/storia-cacio-e-pepe/. Verified: 2026-06-07.
+Source: https://www.bbcgoodfood.com/recipes/cacio-e-pepe. History: https://en.wikipedia.org/wiki/Cacio_e_pepe. Verified: 2026-06-07.
 
 ---
 
@@ -59,7 +59,7 @@ Carbonara surfaced in Rome around 1944, after American troops arrived with eggs 
 
 **Tip.** The single skill is temperature control. The pan must be OFF the heat when the eggs go in. Toss for fifteen seconds before adding pasta water. The residual heat from the pasta and the pan does the cooking.
 
-Source: https://www.lacucinaitaliana.it/ricetta/primi/spaghetti-alla-carbonara/. History: https://www.lacucinaitaliana.it/news/in-primo-piano/storia-spaghetti-alla-carbonara-quando-nato/. Verified: 2026-06-07.
+Source: https://www.lacucinaitaliana.it/ricetta/primi/spaghetti-alla-carbonara/. History: https://en.wikipedia.org/wiki/Carbonara. Verified: 2026-06-07.
 
 ---
 
@@ -98,7 +98,7 @@ Pad Thai is younger than most diners assume. Prime Minister Plaek Phibunsongkhra
 
 **Tip.** Soak the noodles in cold water for half an hour. Hot soaking softens them too much for the wok. They should still be al dente when they hit the heat.
 
-Source: https://hot-thai-kitchen.com/pad-thai-recipe/. History: https://www.bbc.com/travel/article/20180413-thailands-national-dish-pad-thai. Verified: 2026-06-07.
+Source: https://www.bbcgoodfood.com/recipes/pad-thai. History: https://en.wikipedia.org/wiki/Pad_thai. Verified: 2026-06-07.
 
 ---
 
@@ -144,7 +144,7 @@ Pho emerged in northern Vietnam around the turn of the 20th century, most likely
 
 **Tip.** Charring the ginger and onion is the single biggest flavour step. Skip it and you have brown water. Char them hard, until the cut faces are properly black.
 
-Source: https://www.viettyworld.com/pho-bo-recipe. History: https://www.smithsonianmag.com/arts-culture/the-history-of-vietnamese-pho-180977712/. Verified: 2026-06-07.
+Source: https://www.recipetineats.com/vietnamese-pho-recipe/. History: https://en.wikipedia.org/wiki/Pho. Verified: 2026-06-07.
 
 ---
 
@@ -179,7 +179,7 @@ The marketing story is that Raffaele Esposito of Pizzeria Brandi made this pizza
 
 **Tip.** The fermentation does the work. A 24-hour cold rise builds the flavour your oven cannot. Skip it at your peril.
 
-Source: https://www.pizzanapoletana.org/en/pizza-napoletana-stg. History: https://www.lacucinaitaliana.com/italian-food/italian-dishes/the-true-story-of-pizza-margherita. Verified: 2026-06-07.
+Source: https://www.pizzanapoletana.org/en/pizza-napoletana-stg. History: https://en.wikipedia.org/wiki/Pizza_Margherita. Verified: 2026-06-07.
 
 ---
 
@@ -218,7 +218,7 @@ Ramen arrived in Japan from China at the end of the 19th century and became Japa
 
 **Tip.** The bowl must be hotter than you think. A cold bowl drops the dashi temperature in 30 seconds and the ramen experience collapses. Warm with boiling water before assembly.
 
-Source: https://www.justonecookbook.com/shoyu-ramen/. History: https://www.smithsonianmag.com/arts-culture/the-history-of-ramen-from-prison-food-to-japanese-cultural-staple-9116955/. Verified: 2026-06-07.
+Source: https://www.justonecookbook.com/shoyu-ramen/. History: https://en.wikipedia.org/wiki/Ramen. Verified: 2026-06-07.
 
 ---
 
@@ -260,6 +260,6 @@ Tacos al pastor is the Mexican re-invention of Lebanese shawarma. Lebanese migra
 
 **Tip.** The doubled-up corn tortilla is not a typo. Authentic taco service uses two tortillas per taco so the bottom one absorbs juice and the top one stays intact.
 
-Source: https://www.mexicoinmykitchen.com/tacos-al-pastor-recipe/. History: https://www.bbc.com/travel/article/20190312-the-mexican-taco-with-lebanese-roots. Verified: 2026-06-07.
+Source: https://www.mexicoinmykitchen.com/tacos-al-pastor-recipe/. History: https://en.wikipedia.org/wiki/Tacos_al_pastor. Verified: 2026-06-07.
 
 ---

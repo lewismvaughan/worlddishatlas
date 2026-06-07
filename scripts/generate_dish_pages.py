@@ -10,10 +10,20 @@ Usage:
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+
+def _analytics():
+    return {
+        "gtm_id": os.environ.get("WDA_GTM_CONTAINER_ID", ""),
+        "clarity_id": os.environ.get("WDA_CLARITY_PROJECT_ID", ""),
+        "gsc_token": os.environ.get("WDA_GSC_VERIFICATION", ""),
+        "bing_token": os.environ.get("WDA_BING_VERIFICATION", ""),
+    }
 
 REPO = Path(__file__).resolve().parent.parent
 DISHES = REPO / "site-data" / "dishes"
@@ -49,7 +59,7 @@ def render_dish(env, slug: str, data: dict) -> Path:
         vals = data.get(f) or []
         data[f] = [s for s in vals if s in existing]
     tpl = env.get_template("dish.html")
-    html = tpl.render(dish=data, page=page)
+    html = tpl.render(analytics=_analytics(), dish=data, page=page)
     out_path = OUT / slug / "index.html"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html, encoding="utf-8")
